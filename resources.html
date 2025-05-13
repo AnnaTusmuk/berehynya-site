@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ресурси</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       background-color: #f4f4f2;
@@ -33,31 +34,27 @@
     h2 {
       color: #5c6d50;
     }
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 20px;
-      border-bottom: 2px solid #5c6d50;
-    }
-    .tab-button {
-      padding: 10px 20px;
-      cursor: pointer;
-      background-color: #e6eae0;
-      border: none;
-      border-right: 1px solid #ccc;
-      color: #3e4e3c;
-    }
-    .tab-button.active {
-      background-color: #5c6d50;
-      color: white;
-      font-weight: bold;
-    }
-    .tab-content {
+    .resource-block {
       display: none;
-      padding: 20px 0;
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccd0c7;
+      border-left: 5px solid #5c6d50;
+      background-color: #f9f9f7;
     }
-    .tab-content.active {
+    .resource-block.active {
       display: block;
+    }
+    .resource-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+    .note {
+      font-style: italic;
+      margin-bottom: 15px;
     }
     .link-buttons {
       display: flex;
@@ -77,6 +74,38 @@
     .link-buttons a:hover {
       background-color: #4a5a3c;
     }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .tabs button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #d4d8ce;
+      color: #2e2e2e;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .tabs button.active {
+      background-color: #5c6d50;
+      color: white;
+    }
+    table.contacts {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table.contacts td, table.contacts th {
+      border: 1px solid #ccd0c7;
+      padding: 10px;
+      vertical-align: top;
+    }
+    table.contacts th {
+      background-color: #e6eae0;
+      text-align: left;
+    }
     footer {
       background-color: #3e4e3c;
       color: #fff;
@@ -87,6 +116,19 @@
       width: 100%;
     }
   </style>
+  <script>
+    function showTab(index) {
+      const blocks = document.querySelectorAll('.resource-block');
+      const buttons = document.querySelectorAll('.tabs button');
+      blocks.forEach((block, i) => {
+        block.classList.toggle('active', i === index);
+        buttons[i].classList.toggle('active', i === index);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      showTab(0); // Показати першу вкладку за замовчуванням
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -103,75 +145,60 @@
 
   <section>
     <div class="tabs">
-      <button class="tab-button active" onclick="openTab(event, 'tab1')">1. Алгоритм дій</button>
-      <button class="tab-button" onclick="openTab(event, 'tab2')">2. Заяви для забезпечення сім'ї</button>
-      <button class="tab-button" onclick="openTab(event, 'tab3')">3. Зразки клопотання</button>
-      <button class="tab-button" onclick="openTab(event, 'tab4')">4. ДНК тест</button>
-      <button class="tab-button" onclick="openTab(event, 'tab5')">5. Пошук в ТГ</button>
-      <button class="tab-button" onclick="openTab(event, 'tab6')">6. #Полон</button>
-      <button class="tab-button" onclick="openTab(event, 'tab7')">7. Поради після полону</button>
+      <button onclick="showTab(0)">1. Алгоритм дій</button>
+      <button onclick="showTab(1)">2. Заяви для сім'ї</button>
+      <button onclick="showTab(2)">3. Клопотання до слідчого</button>
+      <button onclick="showTab(3)">4. ДНК тест</button>
+      <button onclick="showTab(4)">5. ТГ-канали</button>
+      <button onclick="showTab(5)">6. #Полон</button>
+      <button onclick="showTab(6)">7. Поради після полону</button>
     </div>
 
-    <div id="tab1" class="tab-content active">
-      <h2>Алгоритм дій у разі зникнення безвісти</h2>
-      <p>Нижче перелік актуальних ресурсів, які допоможуть на кожному етапі:</p>
+    <div class="resource-block">
+      <h2>1. Алгоритм дій після сповіщення про зниклого безвісти</h2>
+      <p>Крок за кроком інструкція для родин, які отримали повідомлення про зникнення близької людини.</p>
+      <img src="resources/page-0001.jpg" alt="Алгоритм дій" class="resource-image" />
+      <p class="note">Нижче зазначено посилання, які вам знадобляться на певних етапах алгоритму дій:</p>
       <div class="link-buttons">
-        <a href="https://services.mvs.gov.ua/login" target="_blank">Кабінет родини — МВС</a>
-        <a href="https://koordshtab.gov.ua/" target="_blank">Координаційний штаб з питань поводження з військовополоненими</a>
+        <a href="https://services.mvs.gov.ua/login" target="_blank">Особистий кабінет МВС</a>
+        <a href="https://koordshtab.gov.ua/" target="_blank">Координаційний штаб</a>
         <a href="https://nib.gov.ua/" target="_blank">Національне інформаційне бюро</a>
-        <a href="https://nib.gov.ua/form/establishment-of-deprivation-of-liberty/personally/military/" target="_blank">Повідомити про військовополоненого (форма НІБ)</a>
-        <a href="https://ssu.gov.ua/obiednanyi-tsentr-z-koordynatsii-poshuku-ta-zvilnennia-viiskovopolonenykh-nezakonno-pozbavlenykh-voli-osib-vnaslidok-ahresii-proty-ukrainy" target="_blank">Об’єднаний центр СБУ щодо пошуку та звільнення</a>
-        <a href="https://blogs.icrc.org/ua/2024/02/missing/poshuk-znykli-bezvisty-chervoniy-hrest-2022/" target="_blank">Червоний Хрест: пошук зниклих</a>
-        <a href="https://docs.google.com/document/d/1sytOVKZVsmVp4yXp-JWts0f9ngOPI-eX/edit?tab=t.0" target="_blank">Гайд для родин зниклих</a>
-        <a href="https://mvs.gov.ua/upovnovazenii-z-pitan-osib-zniklix-bezvisti-za-osoblivix-obstavin-1/anketa-na-osobu-iaka-znikla-bezvisti-za-osoblivix-obstavin" target="_blank">Анкета про зниклу особу (МВС)</a>
+        <a href="https://nib.gov.ua/form/establishment-of-deprivation-of-liberty/personally/military/" target="_blank">Форма НІБ — встановлення факту полону</a>
+        <a href="https://ssu.gov.ua/obiednanyi-tsentr-z-koordynatsii-poshuku-ta-zvilnennia-viiskovopolonenykh-nezakonno-pozbavlenykh-voli-osib-vnaslidok-ahresii-proty-ukrainy" target="_blank">Об’єднаний центр при СБУ</a>
+        <a href="https://blogs.icrc.org/ua/2024/02/missing/poshuk-znykli-bezvisty-chervoniy-hrest-2022/" target="_blank">Червоний Хрест — пошук</a>
+        <a href="https://docs.google.com/document/d/1sytOVKZVsmVp4yXp-JWts0f9ngOPI-eX/edit?tab=t.0" target="_blank">Памʼятка для родин</a>
+        <a href="https://mvs.gov.ua/upovnovazenii-z-pitan-osib-zniklix-bezvisti-za-osoblivix-obstavin-1/anketa-na-osobu-iaka-znikla-bezvisti-za-osoblivix-obstavin" target="_blank">Анкета МВС на зниклу особу</a>
       </div>
+
+      <h3 style="margin-top:30px;">Контакти офіцерів ЦВС та батальйонів:</h3>
+      <table class="contacts">
+        <tr>
+          <th>Підрозділ</th>
+          <th>Контактна особа</th>
+          <th>Телефон</th>
+        </tr>
+        <tr><td>Офіцер по роботі з родинами</td><td>Сергій Заїчко</td><td><a href="tel:+380637989893">+380637989893</a></td></tr>
+        <tr><td>ЦВС 120 ОБр ТрО</td><td>Ігор Буравченков</td><td><a href="tel:+380964492093">+380964492093</a></td></tr>
+        <tr><td>168 батальйон</td><td>Оксана</td><td><a href="tel:+380972678848">+380972678848</a></td></tr>
+        <tr><td>169 батальйон</td><td>Юрій</td><td><a href="tel:+380989922548">+380989922548</a></td></tr>
+        <tr><td>170 батальйон</td><td>Сергій</td><td><a href="tel:+380672780137">+380672780137</a></td></tr>
+        <tr><td>171 батальйон</td><td>Сергій</td><td><a href="tel:+380506875833">+380506875833</a></td></tr>
+        <tr><td>172 батальйон</td><td>Олександр</td><td><a href="tel:+380994607721">+380994607721</a></td></tr>
+        <tr><td>173 батальйон</td><td>Андрій</td><td><a href="tel:+380960032292">+380960032292</a></td></tr>
+        <tr><td>210 батальйон</td><td>Олександр</td><td><a href="tel:+380973032858">+380973032858</a></td></tr>
+      </table>
     </div>
 
-    <div id="tab2" class="tab-content">
-      <h2>Заяви для забезпечення сім'ї</h2>
-      <p>Контент буде додано...</p>
-    </div>
-
-    <div id="tab3" class="tab-content">
-      <h2>Зразки клопотання до слідчого</h2>
-      <p>Контент буде додано...</p>
-    </div>
-
-    <div id="tab4" class="tab-content">
-      <h2>ДНК тест</h2>
-      <p>Контент буде додано...</p>
-    </div>
-
-    <div id="tab5" class="tab-content">
-      <h2>Пошук зниклих безвісти в російських ТГ каналах</h2>
-      <p>Контент буде додано...</p>
-    </div>
-
-    <div id="tab6" class="tab-content">
-      <h2>#Полон</h2>
-      <p>Контент буде додано...</p>
-    </div>
-
-    <div id="tab7" class="tab-content">
-      <h2>Поради після звільнення з полону</h2>
-      <p>Контент буде додано...</p>
-    </div>
+    <!-- Порожні вкладки для подальшого заповнення -->
+    <div class="resource-block"><h2>2. Заяви для забезпечення сім'ї</h2><p>Наповнюється...</p></div>
+    <div class="resource-block"><h2>3. Зразки клопотання до слідчого</h2><p>Наповнюється...</p></div>
+    <div class="resource-block"><h2>4. ДНК тест</h2><p>Наповнюється...</p></div>
+    <div class="resource-block"><h2>5. Пошук зниклих безвісти в російських ТГ каналах</h2><p>Наповнюється...</p></div>
+    <div class="resource-block"><h2>6. #Полон</h2><p>Наповнюється...</p></div>
+    <div class="resource-block"><h2>7. Поради після звільнення з полону</h2><p>Наповнюється...</p></div>
   </section>
 
-  <footer>
-    &copy; 2025 ГО "Берегині Незламності"
-  </footer>
-
-  <script>
-    function openTab(evt, tabId) {
-      const tabContents = document.querySelectorAll(".tab-content");
-      const tabButtons = document.querySelectorAll(".tab-button");
-      tabContents.forEach(c => c.classList.remove("active"));
-      tabButtons.forEach(b => b.classList.remove("active"));
-      document.getElementById(tabId).classList.add("active");
-      evt.currentTarget.classList.add("active");
-    }
-  </script>
+  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
 
