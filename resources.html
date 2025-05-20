@@ -192,113 +192,80 @@
 
 <style>
   .resource-block {
-    background-color: #556B2F; /* темний хакі */
-    color: #E6E6E6;
-    padding: 30px 40px;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #3a4427, #556b2f);
+    color: #f0f0f0;
+    padding: 30px;
+    border-radius: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 900px;
-    margin: 20px auto;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-width: 100%;
   }
+
   .resource-block h2 {
-    border-bottom: 3px solid #9ACD32;
+    border-bottom: 2px solid #a5b478;
     padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-weight: 700;
+    font-size: 24px;
   }
+
   .resource-block p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 15px;
   }
+
   .template-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 15px;
   }
+
   .template-button {
-    background-color: #355E3B; /* трохи світліший темний хакі */
-    color: #E6E6E6;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: 600;
+    background-color: #4a5d23;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 10px;
     text-decoration: none;
-    font-size: 17px;
-    flex: 1 1 280px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s;
   }
+
   .template-button:hover {
-    background-color: #9ACD32; /* світлий хакі на ховер */
-    color: #2F4F4F;
-  }
-  .download-note {
-    font-size: 13px;
-    color: #C7D899;
-    margin-top: 6px;
-    text-align: center;
-    font-style: italic;
+    background-color: #647c34;
   }
 </style>
 
+<!-- Вкладка 2 -->
 <div class="resource-block">
   <h2>2. Заяви для забезпечення сім'ї</h2>
   <p>1. Заява у військову частину, для подання на комісію, щоб отримати статус Учасника бойових дій.</p>
   <p>Дії після отримання статусу УБД зниклому безвісти:</p>
   <p>2. Після отримання статусу УБД, звернутися до ЦНАП, для отримання витягу з єдиного реєстру ветеранів війни.</p>
   <p>3. З отриманим витягом ветерана війни, звернутися в пенсійний фонд для оформлення пільг.</p>
-  <p>Шаблони:</p>
+  <p><strong>Шаблони (натисніть, щоб завантажити):</strong></p>
   <div class="template-links">
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/Бланк_Заяви_до_Уповноваженого.pdf" class="template-button" download>📄 Бланк заяви до Уповноваженого</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/Заява%20в%20РАЦС.docx" class="template-button" download>📄 Заява в РАЦС</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/Заява%20на%20комісію%20вч.docx" class="template-button" download>📄 Заява на комісію (в/ч)</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/На%20матеріальну%20допомогу.docx" class="template-button" download>📄 На матеріальну допомогу</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/Бланк_Заяви_до_Уповноваженого.pdf" class="template-button" download>📄 Бланк заяви до Уповноваженого</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/Заява%20в%20РАЦС.docx" class="template-button" download>📄 Заява в РАЦС</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/Заява%20на%20комісію%20вч.docx" class="template-button" download>📄 Заява на комісію (в/ч)</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/На%20матеріальну%20допомогу.docx" class="template-button" download>📄 На матеріальну допомогу</a>
   </div>
 </div>
 
+<!-- Вкладка 3 -->
 <div class="resource-block">
   <h2>3. Зразки клопотання до слідчого</h2>
+  <p><strong>Шаблони клопотань (натисніть, щоб завантажити):</strong></p>
   <div class="template-links">
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Зразок_клопотання%20слідчому.docx" class="template-button" download>📄 Зразок клопотання слідчому</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання%20по%20слідчим%20діям.docx" class="template-button" download>📄 Клопотання по слідчим діям</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання_про_залучення_як_потерпілого.docx" class="template-button" download>📄 Клопотання про залучення як потерпілого</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання%20по%20слідчим%20діям%20(2).docx" class="template-button" download>📄 Клопотання по слідчим діям (2)</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання_про_проведення_експертизи.docx" class="template-button" download>📄 Клопотання про проведення експертизи</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
-    <div>
-      <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання_відібрання_біологічних_зразків_1.docx" class="template-button" download>📄 Клопотання відібрання біологічних зразків</a>
-      <div class="download-note">Натискай щоб завантажити файл</div>
-    </div>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Зразок_клопотання%20слідчому.docx" class="template-button" download>📄 Зразок клопотання слідчому</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання%20по%20слідчим%20діям.docx" class="template-button" download>📄 Клопотання по слідчим діям</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання_про_залучення_як_потерпілого.docx" class="template-button" download>📄 Клопотання про залучення як потерпілого</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання%20по%20слідчим%20діям%20(2).docx" class="template-button" download>📄 Клопотання по слідчим діям (2)</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання_про_проведення_експертизи.docx" class="template-button" download>📄 Клопотання про проведення експертизи</a>
+    <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/myfolder/Клопотання_відібрання_біологічних_зразків_1.docx" class="template-button" download>📄 Клопотання про відібрання біологічних зразків</a>
   </div>
 </div>
+
 
 
 
