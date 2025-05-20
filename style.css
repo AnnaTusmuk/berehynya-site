@@ -1,35 +1,54 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f6f4;
-  color: #333;
+  background: linear-gradient(135deg, #d3d9c1, #a5ad87);
+  color: #2f3b20;
   margin: 0;
 }
+
 header {
-  background-color: #5a6b4c;
-  color: white;
+  background-color: #556b2f; /* темний хакі */
+  color: #f0f5e1; /* дуже світлий хакі, майже білий */
   padding: 20px;
   text-align: center;
+  text-shadow: 1px 1px 2px #37421f;
 }
+
 nav {
-  background-color: #7d8b65;
+  background-color: #758c4f; /* середній хакі */
   display: flex;
   justify-content: center;
   padding: 10px;
   flex-wrap: wrap;
 }
+
 nav a {
-  color: white;
+  color: #f0f5e1;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 15px;
   font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
+
+nav a:hover {
+  color: #c0d882;
+}
+
 section {
-  padding: 20px;
+  padding: 25px 40px;
+  background-color: rgba(173, 183, 125, 0.3); /* напівпрозорий світлий хакі фон */
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 20px auto;
+  box-shadow: 0 2px 6px rgba(85, 107, 47, 0.3);
 }
+
 footer {
-  background-color: #5a6b4c;
-  color: white;
+  background-color: #556b2f;
+  color: #f0f5e1;
   text-align: center;
-  padding: 10px;
-  margin-top: 30px;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
 }
+
