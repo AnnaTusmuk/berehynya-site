@@ -1,92 +1,39 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ресурси ГО</title>
-<style>
-  body { font-family: Arial, sans-serif; margin: 20px; }
-  .tabs { display: flex; cursor: pointer; margin-bottom: 10px; }
-  .tab { padding: 10px 20px; border: 1px solid #ccc; border-bottom: none; background: #eee; }
-  .tab.active { background: white; font-weight: bold; }
-  .content { border: 1px solid #ccc; padding: 15px; }
-  .resource-block { margin-bottom: 20px; }
-</style>
-<script>
-  function showTab(index) {
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.content > div');
-    tabs.forEach((tab, i) => {
-      tab.classList.toggle('active', i === index);
-      contents[i].style.display = i === index ? 'block' : 'none';
-    });
-  }
-  document.addEventListener('DOMContentLoaded', () => showTab(0));
-</script>
-</head>
-<body>
-
-<div class="tabs">
-  <div class="tab active" onclick="showTab(0)">1. Заяви для пошуку</div>
-  <div class="tab">2. Заяви для забезпечення сім'ї</div>
-  <div class="tab">3. Зразки клопотання до слідчого</div>
-  <div class="tab">4. ДНК тест</div>
-  <div class="tab">5. Пошук зниклих в російських ТГ</div>
-  <div class="tab">6. #Полон</div>
-  <div class="tab">7. Поради після звільнення</div>
+<div class="resource-block">
+  <h2>3. Зразки клопотання до слідчого</h2>
+  <p>Зразки заяв і клопотань, які допоможуть родинам звернутися до слідчих органів у справах зниклих безвісти та військовополонених.</p>
+  <img src="resources/page-0002.jpg" alt="Зразки клопотань" class="resource-image" />
 </div>
 
-<div class="content">
-  <div>
-    <div class="resource-block">
-      <h2>1. Заяви для пошуку</h2>
-      <p>Тут буде текст і шаблони заяв для пошуку зниклих безвісти.</p>
-    </div>
-  </div>
-  <div style="display:none">
-    <div class="resource-block">
-      <h2>2. Заяви для забезпечення сім'ї</h2>
-      <p>1. Заява у військову частину, для подання на комісію, щоб отримати статус Учасника бойових дій.</p>
-      <p>Дії після отримання статусу УБД зниклому безвісти:</p>
-      <p>2. Після отримання статусу УБД, звернутися до ЦНАП, для отримання витягу з єдиного реєстру ветеранів війни.</p>
-      <p>3. З отриманим витягом ветерана війни, звернутися в пенсійний фонд для оформлення пільг.</p>
-      <p>Шаблони:</p>
-    </div>
-  </div>
-  <div style="display:none">
-    <div class="resource-block">
-      <h2>3. Зразки клопотання до слідчого</h2>
-      <p>Тут будуть шаблони клопотань до слідчих органів.</p>
-    </div>
-  </div>
-  <div style="display:none">
-    <div class="resource-block">
-      <h2>4. ДНК тест</h2>
-      <p>Інформація про ДНК тестування.</p>
-    </div>
-  </div>
-  <div style="display:none">
-    <div class="resource-block">
-      <h2>5. Пошук зниклих в російських ТГ</h2>
-      <p>Перелік Telegram-каналів для пошуку зниклих безвісти.</p>
-    </div>
-  </div>
-  <div style="display:none">
-    <div class="resource-block">
-      <h2>6. #Полон</h2>
-      <p>Інформація та ресурси по полону.</p>
-    </div>
-  </div>
-  <div style="display:none">
-    <div class="resource-block">
-      <h2>7. Поради після звільнення</h2>
-      <p>Поради для звільнених з полону.</p>
-    </div>
-  </div>
+<div class="resource-block">
+  <h2>4. ДНК тест</h2>
+  <p>Інформація про процедуру взяття ДНК для ідентифікації зниклих безвісти, а також контакти лабораторій.</p>
+  <img src="resources/page-0003.jpg" alt="ДНК тест" class="resource-image" />
 </div>
 
-</body>
-</html>
+<div class="resource-block">
+  <h2>5. Пошук зниклих безвісти в російських Telegram-каналах</h2>
+  <p>Перелік каналів і ресурсів для моніторингу інформації про зниклих безвісти.</p>
+  <ul>
+    <li><a href="https://t.me/missing_ua" target="_blank">@missing_ua</a></li>
+    <li><a href="https://t.me/prisoners_of_war" target="_blank">@prisoners_of_war</a></li>
+  </ul>
+</div>
+
+<div class="resource-block">
+  <h2>6. #Полон</h2>
+  <p>Ресурси, контакти та поради для сімей військовополонених.</p>
+  <ul>
+    <li><a href="https://redcross.org.ua" target="_blank">Червоний Хрест України</a></li>
+    <li><a href="https://sbu.gov.ua" target="_blank">СБУ — Центр з пошуку та звільнення</a></li>
+  </ul>
+</div>
+
+<div class="resource-block">
+  <h2>7. Поради після звільнення з полону</h2>
+  <p>Рекомендації для звільнених військовополонених і цивільних після повернення.</p>
+  <img src="resources/page-0004.jpg" alt="Поради після полону" class="resource-image" />
+</div>
+
 
 
 
