@@ -2,143 +2,90 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Події</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      background-color: #f0f4f0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #2e2e2e;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
     }
-
     header {
-      background-color: #5c6b4f;
+      background-color: #556b2f;
       color: white;
-      padding: 15px 30px;
+      padding: 20px;
       position: relative;
     }
-
     header h1 {
       margin: 0;
-      font-size: 28px;
     }
-
     nav {
-      margin-top: 8px;
+      margin-top: 10px;
     }
-
     nav a {
       color: white;
-      margin: 0 10px;
       text-decoration: none;
+      margin-right: 20px;
       font-weight: bold;
     }
-
+    nav a:hover {
+      text-decoration: underline;
+    }
     .logo {
       position: absolute;
-      top: 10px;
+      top: 20px;
       right: 20px;
-    }
-
-    .logo img {
-      height: 50px;
+      height: 60px;
       border-radius: 8px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
-
-    .event-container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: #ffffff;
+    .content {
+      max-width: 1300px;
+      padding: 40px 60px;
+      margin: 0 auto;
+    }
+    .event-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+    .event-header img {
+      width: 400px;
+      max-width: 100%;
       border-radius: 12px;
-      box-shadow: 0 0 30px rgba(70, 80, 60, 0.3);
+      box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
     }
-
-    .event-title {
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 25px;
-      color: #3e4c35;
-      text-shadow: 1px 1px 0px #cbd5b7;
+    .event-header .text {
+      flex: 1;
+      min-width: 300px;
     }
-
-    .main-content {
+    .gallery {
+      margin-top: 40px;
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
     }
-
-    .main-content img {
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 8px 8px 0px #c0cba0;
-    }
-
-    .main-text {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .main-text p {
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .gallery {
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
     .gallery img {
-      max-width: 200px;
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 5px 5px 15px rgba(90, 110, 70, 0.4);
+      width: 300px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
     }
-
-    .video-block {
-      margin-top: 30px;
-      text-align: center;
-    }
-
     video {
       width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 10px 10px 0px #d2dcc1;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
     }
-
     footer {
-      margin-top: 50px;
+      background-color: #556b2f;
+      color: white;
       text-align: center;
       padding: 20px;
-      background-color: #5c6b4f;
-      color: white;
-    }
-
-    @media screen and (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .main-content img {
-        margin-right: 0;
-      }
-
-      .event-title {
-        font-size: 22px;
-        text-align: center;
-      }
-
-      .logo img {
-        height: 40px;
-      }
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -152,41 +99,37 @@
       <a href="resources.html">Ресурси</a>
       <a href="contacts.html">Контакти</a>
     </nav>
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_2025-05-24_22-31-40.jpg" alt="Логотип">
-    </div>
+    <img class="logo" src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_2025-05-24_22-31-40.jpg" alt="Логотип">
   </header>
 
-  <section class="event-container">
-    <div class="event-title">
-      Рідні полонених та зниклих безвісти з 120-ї бригади ТрО долучилися до акції у Львові "Мамина віра – сина броня"
-    </div>
-
-    <div class="main-content">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_1.jpg" alt="Фото з акції">
-      <div class="main-text">
+  <div class="content">
+    <div class="event-header">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_1.jpg" alt="Головне фото події">
+      <div class="text">
+        <h2>Рідні полонених та зниклих безвісти з 120-ї бригади ТрО долучилися до акції у Львові "Мамина віра – сина броня"</h2>
         <p>У центрі Львова, біля пам’ятника Тарасові Шевченку, відбулася мирна акція «Мамина віра – сина броня» на підтримку зниклих безвісти та полонених українських військових. Захід був приурочений до Дня Матері — дня, що символізує силу, віру та незламність родин, які чекають своїх рідних із полону.</p>
         <p>Цього разу до акції долучилися також рідні зниклих безвісти та полонених військовослужбовців 120-ї окремої бригади територіальної оборони. Їхня присутність підкреслила, що проблема торкається не лише окремих підрозділів, а тисяч родин по всій Україні.</p>
         <p>Серед учасників були представники родин полонених і зниклих з різних регіонів, а також представники Координаційного штабу з питань поводження з військовополоненими, Офісу Уповноваженого з прав людини у Львівській області та керівник апарату Львівської ОДА Тарас Грень.</p>
         <p>Після виступів біля пам’ятника Шевченку учасники рушили до площі перед Оперним театром, де провели символічний перформанс, закликаючи суспільство та владу до активніших дій задля визволення полонених і встановлення долі зниклих безвісти.</p>
-        <p><strong>У своїй промові Тарас Грень наголосив:</strong><br>«Ми не маємо права забути про тих, хто боронить країну, і про родини, які чекають на них щодня. Підтримка наших захисників — це спільна справа держави й народу. Ми маємо зробити все, аби кожен повернувся додому».</p>
+        <p>У своїй промові Тарас Грень наголосив:<br><em>«Ми не маємо права забути про тих, хто боронить країну, і про родини, які чекають на них щодня. Підтримка наших захисників — це спільна справа держави й народу. Ми маємо зробити все, аби кожен повернувся додому».</em></p>
       </div>
     </div>
 
     <div class="gallery">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_5.jpg" alt="Додаткове фото 1">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_6.jpg" alt="Додаткове фото 2">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_7.jpg" alt="Додаткове фото 3">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_5.jpg" alt="Фото 5">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_6.jpg" alt="Фото 6">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_7.jpg" alt="Фото 7">
     </div>
 
-    <div class="video-block">
-      <video controls>
-        <source src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/video_2025-05-24_21-44-47.mp4" type="video/mp4">
-        Ваш браузер не підтримує відтворення відео.
-      </video>
-    </div>
-  </section>
+    <video controls>
+      <source src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/video_2025-05-24_21-44-47.mp4" type="video/mp4">
+      Ваш браузер не підтримує відео.
+    </video>
+  </div>
 
-  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
+  <footer>
+    &copy; 2025 ГО "Берегині Незламності"
+  </footer>
 </body>
 </html>
+
