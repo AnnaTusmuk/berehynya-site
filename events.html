@@ -35,12 +35,37 @@
     }
     .logo {
       position: absolute;
-      top: 10px; /* Піднято логотип на 10px замість 20px */
+      top: 5px; /* Піднято логотип на 10px замість 20px */
       right: 20px;
       height: 120px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
+
+/* Медіа-запит для мобільних: ширина екрану до 600px */
+@media (max-width: 600px) {
+  .logo {
+    position: static;  /* Відміняємо абсолютне позиціювання */
+    display: block;
+    margin: 10px auto; /* Центруємо зверху */
+    height: 40px;      /* Зменшуємо розмір */
+  }
+
+  nav {
+    margin-top: 10px;
+    text-align: center; /* Центруємо меню */
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0 8px;
+  }
+
+  header {
+    padding-bottom: 10px; /* Щоб меню і логотип мали простір */
+  }
+}
+    
     .content {
       max-width: 1300px;
       padding: 40px 60px;
