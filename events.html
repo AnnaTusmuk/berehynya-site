@@ -2,96 +2,146 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Події</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Події - Мамина віра – сина броня</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background-color: #556b2f;
-      color: white;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2e9;
+      color: #3a3a2e;
+      margin: 20px;
+      line-height: 1.6;
       position: relative;
     }
-    header h1 {
-      margin: 0;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .logo {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      height: 60px;
+
+    /* Лого в кутку */
+    #logo {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      width: 120px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 1000;
+      background: #e5e7d3;
+      padding: 4px;
     }
+
+    h1 {
+      color: #556b2f; /* темно-хакі */
+      text-shadow: 1px 1px 3px #9cad7f;
+      margin-bottom: 25px;
+    }
+
     .content {
-      max-width: 1300px;
-      padding: 40px 60px;
+      max-width: 900px;
       margin: 0 auto;
     }
-    .event-header {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: flex-start;
-    }
-    .event-header img {
-      width: 400px;
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
-    }
-    .event-header .text {
-      flex: 1;
-      min-width: 300px;
-    }
-    .gallery {
-      margin-top: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .gallery img {
-      width: 300px;
-      max-width: 100%;
+
+    .main-photo {
+      float: left;
+      width: 320px;
+      margin-right: 25px;
+      margin-bottom: 20px;
       border-radius: 10px;
-      box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 15px rgba(85, 107, 47, 0.4);
+      object-fit: cover;
+      height: 220px;
     }
+
+    .text-block {
+      overflow: hidden; /* щоб після float все було ок */
+    }
+
+    .text-block p {
+      margin-bottom: 1em;
+      font-size: 1.1rem;
+    }
+
     video {
-      width: 100%;
-      margin-top: 40px;
+      display: block;
+      margin: 35px auto;
+      max-width: 100%;
       border-radius: 12px;
-      box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(85, 107, 47, 0.35);
     }
+
+    .bottom-photos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .bottom-photos img {
+      max-width: 220px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(85, 107, 47, 0.4);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .bottom-photos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 22px rgba(85, 107, 47, 0.6);
+    }
+
+    /* Навігація */
+    header {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #9cad7f;
+      padding-bottom: 10px;
+    }
+
+    nav a {
+      color: #556b2f;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #8a9a5b;
+    }
+
     footer {
-      background-color: #556b2f;
-      color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #9cad7f;
+      color: #556b2f;
+      font-size: 0.9rem;
+    }
+
+    /* Адаптив */
+    @media (max-width: 768px) {
+      .main-photo {
+        float: none;
+        display: block;
+        margin: 0 auto 25px auto;
+        width: 90%;
+        height: auto;
+      }
+      .bottom-photos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .bottom-photos img {
+        max-width: 80%;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Лого -->
+  <img id="logo" src="https://github.com/AnnaTusmuk/berehynya-site/raw/main/new-file/photo_2025-05-24_22-31-40.jpg" alt="Логотип ГО Берегині Незламності" />
+
   <header>
-    <h1>Події</h1>
+    <h1>Рідні полонених та зниклих безвісти з 120-ї бригади ТрО долучилися до акції у Львові "Мамина віра – сина броня"</h1>
     <nav>
       <a href="index.html">Головна</a>
       <a href="about.html">Про нас</a>
@@ -99,37 +149,38 @@
       <a href="resources.html">Ресурси</a>
       <a href="contacts.html">Контакти</a>
     </nav>
-    <img class="logo" src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_2025-05-24_22-31-40.jpg" alt="Логотип">
   </header>
 
-  <div class="content">
-    <div class="event-header">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_1.jpg" alt="Головне фото події">
-      <div class="text">
-        <h2>Рідні полонених та зниклих безвісти з 120-ї бригади ТрО долучилися до акції у Львові "Мамина віра – сина броня"</h2>
-        <p>У центрі Львова, біля пам’ятника Тарасові Шевченку, відбулася мирна акція «Мамина віра – сина броня» на підтримку зниклих безвісти та полонених українських військових. Захід був приурочений до Дня Матері — дня, що символізує силу, віру та незламність родин, які чекають своїх рідних із полону.</p>
-        <p>Цього разу до акції долучилися також рідні зниклих безвісти та полонених військовослужбовців 120-ї окремої бригади територіальної оборони. Їхня присутність підкреслила, що проблема торкається не лише окремих підрозділів, а тисяч родин по всій Україні.</p>
-        <p>Серед учасників були представники родин полонених і зниклих з різних регіонів, а також представники Координаційного штабу з питань поводження з військовополоненими, Офісу Уповноваженого з прав людини у Львівській області та керівник апарату Львівської ОДА Тарас Грень.</p>
-        <p>Після виступів біля пам’ятника Шевченку учасники рушили до площі перед Оперним театром, де провели символічний перформанс, закликаючи суспільство та владу до активніших дій задля визволення полонених і встановлення долі зниклих безвісти.</p>
-        <p>У своїй промові Тарас Грень наголосив:<br><em>«Ми не маємо права забути про тих, хто боронить країну, і про родини, які чекають на них щодня. Підтримка наших захисників — це спільна справа держави й народу. Ми маємо зробити все, аби кожен повернувся додому».</em></p>
-      </div>
-    </div>
+  <section class="content">
+    <img class="main-photo" src="https://github.com/AnnaTusmuk/berehynya-site/raw/main/new-file/photo_1.jpg" alt="Акція Мамина віра – сина броня" />
 
-    <div class="gallery">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_5.jpg" alt="Фото 5">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_6.jpg" alt="Фото 6">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_7.jpg" alt="Фото 7">
+    <div class="text-block">
+      <p>У центрі Львова, біля пам’ятника Тарасові Шевченку, відбулася мирна акція «Мамина віра – сина броня» на підтримку зниклих безвісти та полонених українських військових. Захід був приурочений до Дня Матері — дня, що символізує силу, віру та незламність родин, які чекають своїх рідних із полону.</p>
+
+      <p>Цього разу до акції долучилися також рідні зниклих безвісти та полонених військовослужбовців 120-ї окремої бригади територіальної оборони. Їхня присутність підкреслила, що проблема торкається не лише окремих підрозділів, а тисяч родин по всій Україні.</p>
+
+      <p>Серед учасників були представники родин полонених і зниклих з різних регіонів, а також представники Координаційного штабу з питань поводження з військовополоненими, Офісу Уповноваженого з прав людини у Львівській області та керівник апарату Львівської ОДА Тарас Грень.</p>
+
+      <p>Після виступів біля пам’ятника Шевченку учасники рушили до площі перед Оперним театром, де провели символічний перформанс, закликаючи суспільство та владу до активніших дій задля визволення полонених і встановлення долі зниклих безвісти.</p>
+
+      <p>У своїй промові Тарас Грень наголосив:<br />
+      <em>«Ми не маємо права забути про тих, хто боронить країну, і про родини, які чекають на них щодня. Підтримка наших захисників — це спільна справа держави й народу. Ми маємо зробити все, аби кожен повернувся додому».</em></p>
     </div>
 
     <video controls>
-      <source src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/video_2025-05-24_21-44-47.mp4" type="video/mp4">
-      Ваш браузер не підтримує відео.
+      <source src="https://github.com/AnnaTusmuk/berehynya-site/raw/main/new-file/video_2025-05-24_21-44-47.mp4" type="video/mp4" />
+      Ваш браузер не підтримує відтворення відео.
     </video>
-  </div>
 
-  <footer>
-    &copy; 2025 ГО "Берегині Незламності"
-  </footer>
+    <div class="bottom-photos">
+      <img src="https://github.com/AnnaTusmuk/berehynya-site/raw/main/new-file/photo_5.jpg" alt="Фото 5" />
+      <img src="https://github.com/AnnaTusmuk/berehynya-site/raw/main/new-file/photo_6.jpg" alt="Фото 6" />
+      <img src="https://github.com/AnnaTusmuk/berehynya-site/raw/main/new-file/photo_7.jpg" alt="Фото 7" />
+    </div>
+  </section>
+
+  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
+
 
