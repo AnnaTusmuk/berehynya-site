@@ -73,14 +73,16 @@
       max-width: 100%;
       border-radius: 10px;
       box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
-     } 
-    video {
+    } 
+  video {
   width: 100%;
-  max-width: 600px;
-  margin-top: 20px;
+  max-height: 450px; /* обмежує висоту відео */
+  object-fit: contain; /* щоб відео зберігало пропорції */
+  margin-top: 40px;
   border-radius: 12px;
   box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
 }
+
 
     footer {
       background-color: #556b2f;
