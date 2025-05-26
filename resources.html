@@ -170,88 +170,46 @@
     <a href="https://mvs.gov.ua/upovnovazenii-z-pitan-osib-zniklix-bezvisti-za-osoblivix-obstavin-1/anketa-na-osobu-iaka-znikla-bezvisti-za-osoblivix-obstavin" target="_blank">Анкета МВС на зниклу особу</a>
   </div>
 
-  <h3 style="margin-top:30px;">Контакти офіцерів ЦВС та батальйонів:</h3>
-  <div class="table-wrapper">
-    <table class="contacts">
-      <thead>
-        <tr>
-          <th>Підрозділ</th>
-          <th>Контактна особа</th>
-          <th>Телефон</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Офіцер по роботі з родинами</td><td>Сергій Заїчко</td><td><a href="tel:+380637989893">+380637989893</a></td></tr>
-        <tr><td>ЦВС 120 ОБр ТрО</td><td>Ігор Буравченков</td><td><a href="tel:+380964492093">+380964492093</a></td></tr>
-        <tr><td>168 батальйон</td><td>Оксана</td><td><a href="tel:+380972678848">+380972678848</a></td></tr>
-        <tr><td>169 батальйон</td><td>Юрій</td><td><a href="tel:+380989922548">+380989922548</a></td></tr>
-        <tr><td>170 батальйон</td><td>Сергій</td><td><a href="tel:+380672780137">+380672780137</a></td></tr>
-        <tr><td>171 батальйон</td><td>Сергій</td><td><a href="tel:+380506875833">+380506875833</a></td></tr>
-        <tr><td>172 батальйон</td><td>Олександр</td><td><a href="tel:+380994607721">+380994607721</a></td></tr>
-        <tr><td>173 батальйон</td><td>Андрій</td><td><a href="tel:+380960032292">+380960032292</a></td></tr>
-        <tr><td>210 батальйон</td><td>Олександр</td><td><a href="tel:+380973032858">+380973032858</a></td></tr>
-      </tbody>
-    </table>
-  </div>
+ 
+      <h3 style="margin-top:30px;">Контакти офіцерів ЦВС та батальйонів:</h3>
+
+<div class="contacts-wrapper">
+  <table class="contacts">
+    <thead>
+      <tr>
+        <th>Підрозділ</th>
+        <th>Контактна особа</th>
+        <th>Телефон</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Офіцер по роботі з родинами</td><td>Сергій Заїчко</td><td><a href="tel:+380637989893">+380637989893</a></td></tr>
+      <tr><td>ЦВС 120 ОБр ТрО</td><td>Ігор Буравченков</td><td><a href="tel:+380964492093">+380964492093</a></td></tr>
+      <tr><td>168 батальйон</td><td>Оксана</td><td><a href="tel:+380972678848">+380972678848</a></td></tr>
+      <tr><td>169 батальйон</td><td>Юрій</td><td><a href="tel:+380989922548">+380989922548</a></td></tr>
+      <tr><td>170 батальйон</td><td>Сергій</td><td><a href="tel:+380672780137">+380672780137</a></td></tr>
+      <tr><td>171 батальйон</td><td>Сергій</td><td><a href="tel:+380506875833">+380506875833</a></td></tr>
+      <tr><td>172 батальйон</td><td>Олександр</td><td><a href="tel:+380994607721">+380994607721</a></td></tr>
+      <tr><td>173 батальйон</td><td>Андрій</td><td><a href="tel:+380960032292">+380960032292</a></td></tr>
+      <tr><td>210 батальйон</td><td>Олександр</td><td><a href="tel:+380973032858">+380973032858</a></td></tr>
+    </tbody>
+  </table>
 </div>
 
 <style>
-  .resource-block {
-    background: linear-gradient(135deg, #3a4427, #556b2f);
-    color: #f0f0f0;
-    padding: 30px;
-    border-radius: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  }
-
-  .resource-block h2 {
-    border-bottom: 2px solid #a5b478;
-    padding-bottom: 10px;
-    font-size: 24px;
-  }
-
-  .resource-block p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  .link-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .link-buttons a {
-    background-color: #4a5d23;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-
-  .link-buttons a:hover {
-    background-color: #647c34;
-  }
-
-  .table-wrapper {
-    margin-top: 20px;
-    width: 100%;
+  .contacts-wrapper {
+    overflow-x: auto;
+    margin-left: -10px; /* Зсуває таблицю вліво на мобільних */
   }
 
   .contacts {
     width: 100%;
     border-collapse: collapse;
-    background-color: #3a4427; /* Хакі зелений фон */
+    background-color: #3a4427; /* Темно-зелений фон */
     color: #fff;
     font-size: 16px;
     border-radius: 10px;
-    overflow: hidden;
+    min-width: 600px; /* Мінімальна ширина для збереження структури */
   }
 
   .contacts th,
@@ -262,34 +220,28 @@
   }
 
   .contacts th {
-    background-color: #2d361e;
+    background-color: #2d361e; /* Темно-зелений фон для заголовків */
     font-weight: bold;
+    color: #ffffff;
   }
 
   .contacts a {
-    color: #c4ffc4;
+    color: #c1f0c1;
     text-decoration: none;
   }
 
-  .contacts a:hover {
-    text-decoration: underline;
-  }
+  @media screen and (max-width: 768px) {
+    .contacts-wrapper {
+      margin-left: -15px; /* Більше зсування вліво на мобільних */
+    }
 
-  /* Адаптивність */
-  @media (max-width: 600px) {
     .contacts {
-      font-size: 14px;
-    }
-    .contacts th, .contacts td {
-      padding: 6px;
-    }
-    .link-buttons a {
-      font-size: 14px;
-      padding: 8px 12px;
+      font-size: 15px;
     }
   }
 </style>
 
+      
 
 <!-- Вкладка 2 -->
 <div class="resource-block">
