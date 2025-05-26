@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candidate Form</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #2a9d8f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Candidate Registration</h2>
+  <form id="candidate-form">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+
+    <h3>Company 1</h3>
+    <input type="text" name="company1_name" placeholder="Company Name" />
+    <input type="text" name="company1_period" placeholder="Period (e.g. 2020-2022)" />
+    <textarea name="company1_description" placeholder="Project Description"></textarea>
+    <input type="text" name="company1_stack" placeholder="Tech Stack" />
+
+    <h3>Company 2 (optional)</h3>
+    <input type="text" name="company2_name" placeholder="Company Name" />
+    <input type="text" name="company2_period" placeholder="Period (e.g. 2018-2020)" />
+    <textarea name="company2_description" placeholder="Project Description"></textarea>
+    <input type="text" name="company2_stack" placeholder="Tech Stack" />
+
+    <textarea name="education" placeholder="Education"></textarea>
+    <textarea name="languages" placeholder="Languages"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    document.getElementById("candidate-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+      tg.sendData(JSON.stringify(data));
+      tg.close();
+    });
+  </script>
+</body>
+</html>
