@@ -204,7 +204,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 40px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    max-width: 100%;
   }
 
   .resource-block h2 {
@@ -241,32 +240,34 @@
   }
 
   .table-wrapper {
-    overflow-x: auto;
     margin-top: 20px;
+    width: 100%;
   }
 
   .contacts {
     width: 100%;
     border-collapse: collapse;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #3a4427; /* Хакі зелений фон */
+    color: #fff;
     font-size: 16px;
-    min-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
-  .contacts th, .contacts td {
-    border: 1px solid #ccc;
+  .contacts th,
+  .contacts td {
+    border: 1px solid #6a7f3f;
     padding: 10px;
     text-align: left;
   }
 
   .contacts th {
-    background-color: #364e1e;
-    color: #ffffff;
+    background-color: #2f3a1f;
+    font-weight: bold;
   }
 
   .contacts a {
-    color: #1a4b15;
+    color: #c4ffc4;
     text-decoration: none;
   }
 
@@ -274,9 +275,17 @@
     text-decoration: underline;
   }
 
+  /* Адаптивність */
   @media (max-width: 600px) {
     .contacts {
       font-size: 14px;
+    }
+    .contacts th, .contacts td {
+      padding: 6px;
+    }
+    .link-buttons a {
+      font-size: 14px;
+      padding: 8px 12px;
     }
   }
 </style>
