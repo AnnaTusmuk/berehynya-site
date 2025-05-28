@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ініціативи</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 20px;
+    }
+    .content img {
+      max-width: 300px;
+      height: auto;
+      float: left;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .content-text {
+      flex: 1;
+      text-align: justify;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 40px 20px;
+    }
+    .gallery img {
+      max-width: 100%;
+      width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,14 +56,44 @@
       <a href="contacts.html">Контакти</a>
     </nav>
   </header>
-  <section>
-    <ul>
-      <li>Сприяння у пошуку зниклих безвісти та полонених</li>
-      <li>Інформаційна підтримка родин</li>
-      <li>Волонтерська допомога та координація</li>
-      <li>Співпраця з державними органами</li>
-    </ul>
+
+  <section class="content">
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_444.jpg" alt="Зустріч з Уповноваженим" />
+    <div class="content-text">
+      <p><strong>❗️Уповноважений з питань осіб, зниклих безвісти за особливих обставин Артур Добросердов</strong> провів зустрічі з Об’єднаннями родин 120-тої окремої бригади територіальної оборони (120 ОБрТрО) та 46-тої окремої аеромобільної бригади (46 ОАеМБр). Участь у заході також взяли представники ЦУ ЦВС ГШ Збройних Сил України, НПУ ГСУ та представники військових частин.</p>
+
+      <p><strong>✔️ Основними темами зустрічі стали:</strong></p>
+      <ul>
+        <li>налагодження комунікації з командуванням військових частин;</li>
+        <li>обговорено питання, яке стосується процедури проведення службових розслідувань та отримання їх результатів родичами зниклих;</li>
+        <li>повернення особистих речей зниклих безвісти Захисників;</li>
+        <li>складності репатріації тіл полеглих Героїв;</li>
+        <li>порядок призначення та проведення молекулярно-генетичних експертиз;</li>
+        <li>питання підтвердження полону та здійснення переговорного процесу по поверненню наших Захисників;</li>
+        <li>роз'яснення щодо розслідування кримінальних проваджень за фактами безвісного зникнення.</li>
+      </ul>
+
+      <p>Також надано інформацію стосовно державних соціальних гарантій для родин зниклих безвісти та загиблих військовослужбовців.</p>
+
+      <p><strong>☝️Уповноважений наголосив</strong> на важливості комунікації з Управлінням з питань осіб, зниклих безвісти за особливих обставин (Секретаріатом Уповноваженого), зокрема, щодо інформування про стан розшуку зниклих безвісти, про роботу Єдиного реєстру осіб, зниклих безвісти за особливих обставин та його синхронізацію з інформаційними системами інших органів, уповноважених на облік та розшук осіб, зниклих безвісти за особливих обставин.</p>
+
+      <p><strong>Нагадуємо:</strong> по всіх питаннях, пов'язаних з пошуком та ідентифікацією зниклих безвісти осіб, а також для координації з правоохоронними органами та іншими структурами, Ви можете звертатися до Уповноваженого:</p>
+      <p>
+        <strong>Електронна адреса:</strong> pgmia@mvs.gov.ua<br />
+        <strong>Поштова адреса:</strong> вул. Богомольця, 10, м. Київ, 01601<br />
+        <strong>Телефон «Гарячої лінії»:</strong> 16-98
+      </p>
+    </div>
   </section>
+
+  <section class="gallery">
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/2_444.jpg" alt="Фото 2" />
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/3_444.jpg" alt="Фото 3" />
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/4_444.jpg" alt="Фото 4" />
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/5_444.jpg" alt="Фото 5" />
+  </section>
+
   <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
+
