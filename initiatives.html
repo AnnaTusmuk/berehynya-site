@@ -88,6 +88,31 @@
       white-space: pre-line;
       flex-grow: 1;
     }
+
+
+<head>
+  <style>
+    /* Основні стилі тут */
+    body { ... }
+    header { ... }
+    .initiative-content { ... }
+    /* інші стилі */
+
+    /* Медіазапити в кінці */
+    @media (max-width: 768px) {
+      .initiative-content {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .initiative-images {
+        order: 2;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .initiative-text {
+        order: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -101,6 +126,10 @@
       <a href="contacts.html">Контакти</a>
     </nav>
   </header>
+  ...
+</body>
+
+    
 
   <!-- Перша стаття -->
   <section class="initiative-content">
