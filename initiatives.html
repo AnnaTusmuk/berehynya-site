@@ -89,26 +89,45 @@
       flex-grow: 1;
     }
 
-
-<head>
-  <style>
-    /* Основні стилі тут */
-    body { ... }
-    header { ... }
-    .initiative-content { ... }
-    /* інші стилі */
-
-    /* Медіазапити в кінці */
+    /* Для мобільної версії */
     @media (max-width: 768px) {
       .initiative-content {
         flex-direction: column;
         padding: 20px;
       }
-      .initiative-images {
-        order: 2;
+      /* Контейнер для верхнього фото */
+      .initiative-top-image {
         width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+      .initiative-top-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+      /* Блок з іншими фото під текстом */
+      .initiative-images {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 15px;
         margin-top: 20px;
       }
+      .initiative-images img {
+        width: 120px;
+        flex-shrink: 0;
+        border-radius: 10px;
+      }
+      /* Приховуємо перше фото в основному блоці */
+      .initiative-images img:first-child {
+        display: none;
+      }
+      /* Текст піднімаємо над іншими фото */
       .initiative-text {
         order: 1;
       }
@@ -126,13 +145,13 @@
       <a href="contacts.html">Контакти</a>
     </nav>
   </header>
-  ...
-</body>
-
-    
 
   <!-- Перша стаття -->
   <section class="initiative-content">
+    <!-- Верхнє фото для мобільної -->
+    <div class="initiative-top-image">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_444.jpg" alt="Фото 1" />
+    </div>
     <div class="initiative-images">
       <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_444.jpg" alt="Фото 1" />
       <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/4_444.jpg" alt="Фото 4" />
@@ -165,6 +184,10 @@
 
   <!-- Друга стаття -->
   <section class="initiative-content">
+    <!-- Верхнє фото для мобільної -->
+    <div class="initiative-top-image">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_555.jpg" alt="Фото 1" />
+    </div>
     <div class="initiative-images">
       <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_555.jpg" alt="Фото 1" />
       <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/2_555.jpg" alt="Фото 2" />
@@ -177,9 +200,9 @@
 
 ➡️Обговорювали майбутнє розміщення в Особистому кабінеті інформації про наявність у відповідному реєстрі точки геолокації ймовірного зникнення Захисника, підготовку й перебіг репатріаційних заходів, які стосуються тіл та решток загиблих, висвітлювали процес їх ідентифікації через порівняння ДНК-зразків та інші види експертиз, встановлення факту смерті і проведення гідного поховання Героя.
 
-Інші важливі питання, які розглядали – коли статус «полон» вважається підтвердженим, чому фото- та відеоматеріали, взяті з ворожих інтернет-ресурсів, є сумнівним джерелом відомостей; як відбуваються перемовини про звільнення важкопоранених, хворих та інших вразливих категорій полонених.
+Інші важливі питання, які розглядали – коли статус «зниклий безвісти» переходить у статус «загиблий» і як родини можуть впливати на прискорення розгляду таких справ.
 
-Відповідально, поетапно і всебічно роз'яснили, що робить Уповноважений із питань осіб, зниклих безвісти, що таке Єдиний реєстр, як він працює, як родини можуть відстежувати перебіг розшуку та отримання належних виплат, з якими громадськими організаціями, зокрема й міжнародними, краще налагоджувати співпрацю, та відповів на низку поточних запитань.
+☝️ Усі деталі цього та інших заходів Координаційного штабу з питань безвісти зниклих доступні у розділі «Новини» на сайті Міністерства оборони України.
     </div>
   </section>
 
@@ -188,6 +211,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
