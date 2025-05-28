@@ -16,18 +16,25 @@
       background-color: #4a664a; /* хакі фон для шапки */
       padding: 15px 20px;
       color: white;
+      text-align: center; /* Центруємо все в header */
     }
     header h1 {
       margin: 0 0 10px 0;
     }
+    nav {
+      margin: 0 auto;
+      display: inline-block; /* Щоб меню було по центру */
+    }
     nav a {
       color: white;
       text-decoration: none;
-      margin-right: 15px;
+      margin: 0 15px;
       font-weight: 600;
       font-size: 16px;
+      transition: color 0.3s;
     }
     nav a:hover {
+      color: #cdd2b3; /* світліший хакі для ховера */
       text-decoration: underline;
     }
     footer {
@@ -53,7 +60,7 @@
       flex-direction: column;
       gap: 20px;
       flex-shrink: 0;
-      width: 300px;  /* збільшена ширина блоку з фото */
+      width: 300px;  /* ширина блоку з фото */
     }
 
     .initiative-images img {
@@ -71,7 +78,7 @@
       border-radius: 10px;
       flex-grow: 1;
       line-height: 1.6;
-      font-size: 18px; /* збільшений розмір тексту */
+      font-size: 18px; /* розмір тексту */
       white-space: pre-line; /* щоб переносились рядки з тексту */
     }
   </style>
@@ -139,9 +146,12 @@
     </div>
   </section>
 
-  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
+  <footer>
+    © 2025 ГО "Берегині Незламності"
+  </footer>
 </body>
 </html>
+
 
 
 
