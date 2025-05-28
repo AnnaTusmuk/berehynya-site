@@ -1,131 +1,192 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #d3d9c1, #a5ad87);
-  color: #2f3b20;
-  margin: 0;
-  padding: 0 20px 40px 20px;
-}
-header {
-  background-color: #556b2f;
-  color: #f0f5e1;
-  padding: 15px 20px;
-  text-align: center;
-  text-shadow: 1px 1px 2px #37421f;
-}
-header h1 {
-  margin: 0 0 10px 0;
-}
-nav {
-  background-color: #758c4f;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  flex-wrap: wrap;
-}
-nav a {
-  color: #f0f5e1;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-}
-nav a:hover {
-  color: #c0d882;
-  text-decoration: underline;
-}
-footer {
-  background-color: #556b2f;
-  color: #f0f5e1;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9em;
-}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Зустрічі з Об’єднаннями родин 120-тої бригади ТРО</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #d3d9c1, #a5ad87);
+      color: #2f3b20;
+      margin: 0;
+      padding: 0 20px 40px 20px;
+    }
+    header {
+      background-color: #556b2f;
+      color: #f0f5e1;
+      padding: 15px 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #37421f;
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 1.8em;
+    }
+    nav {
+      background-color: #758c4f;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: #f0f5e1;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #c0d882;
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #556b2f;
+      color: #f0f5e1;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
 
-.initiative-content {
-  display: flex;
-  gap: 30px;
-  margin: 30px auto 0 auto;
-  max-width: 900px;
-  align-items: flex-start;
-  border-radius: 10px;
-  background-color: rgba(173, 183, 125, 0.3);
-  padding: 25px 40px;
-  box-shadow: 0 2px 6px rgba(85, 107, 47, 0.3);
-}
+    .initiative-content {
+      display: flex;
+      gap: 30px;
+      margin: 30px auto 0 auto;
+      max-width: 900px;
+      align-items: flex-start;
+      border-radius: 10px;
+      background-color: rgba(173, 183, 125, 0.3);
+      padding: 25px 40px;
+      box-shadow: 0 2px 6px rgba(85, 107, 47, 0.3);
+    }
 
-.initiative-images {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex-shrink: 0;
-  width: 300px;
-  max-width: 40%;
-}
+    .initiative-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-shrink: 0;
+      width: 300px;
+      max-width: 40%;
+    }
 
-.initiative-images img {
-  border-radius: 10px;
-  width: 100%;
-  height: auto;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
+    .initiative-images img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+      display: block;
+    }
 
-.initiative-text {
-  min-width: 300px;
-  flex-grow: 1;
-  line-height: 1.6;
-  font-size: 16px;
-  color: #2f3b20;
-}
+    .initiative-text {
+      min-width: 300px;
+      flex-grow: 1;
+      line-height: 1.6;
+      font-size: 16px;
+      color: #2f3b20;
+    }
 
-.initiative-text p {
-  margin-bottom: 1em;
-}
+    .initiative-text p {
+      margin-bottom: 1em;
+    }
 
-.initiative-top-image {
-  width: 100%;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+    .initiative-top-image {
+      width: 100%;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-.initiative-top-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
+    .initiative-top-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
 
-@media (max-width: 768px) {
-  .initiative-content {
-    flex-direction: column;
-    padding: 20px;
-    max-width: 100%;
-  }
-  .initiative-top-image {
-    margin-bottom: 20px;
-  }
-  .initiative-images {
-    width: 100%;
-    flex-direction: row;
-    gap: 15px;
-    margin-top: 20px;
-    justify-content: flex-start;
-  }
-  .initiative-images img {
-    width: 120px;
-    flex-shrink: 0;
-  }
-  .initiative-images img:first-child {
-    display: none;
-  }
-  .initiative-text {
-    order: 1;
-    margin-top: 15px;
-  }
-}
+    @media (max-width: 768px) {
+      .initiative-content {
+        flex-direction: column;
+        padding: 20px;
+        max-width: 100%;
+      }
+      .initiative-top-image {
+        margin-bottom: 20px;
+      }
+      .initiative-images {
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: flex-start;
+      }
+      .initiative-images img {
+        width: 120px;
+        flex-shrink: 0;
+      }
+      .initiative-images img:first-child {
+        display: none;
+      }
+      .initiative-text {
+        order: 1;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Зустрічі з Об’єднаннями родин 120-тої бригади ТРО</h1>
+  </header>
+
+  <main>
+    <div class="initiative-content">
+      <div class="initiative-top-image">
+        <img src="https://i.imgur.com/2jLKpuQ.jpg" alt="Зустрічі з Об’єднаннями родин" />
+      </div>
+      <div class="initiative-text">
+        <p>❗️Уповноважений з питань осіб, зниклих безвісти за особливих обставин Артур Добросердов провів зустрічі з Об’єднаннями родин 120-тої окремої бригади територіальної оборони (120 ОБрТрО) та 46-тої окремої аеромобільної бригади (46 ОАеМБр). Участь у заході також взяли представники ЦУ ЦВС ГШ Збройних Сил України, НПУ ГСУ та представники військових частин.</p>
+
+        <p>✔️ Основними темами зустрічі стали:</p>
+        <ul>
+          <li>налагодження комунікації з командуванням військових частин;</li>
+          <li>обговорено питання, яке стосується процедури проведення службових розслідувань та отримання їх результатів родичами зниклих;</li>
+          <li>повернення особистих речей зниклих безвісти Захисників;</li>
+          <li>складності репатріації тіл полеглих Героїв;</li>
+          <li>порядок призначення та проведення молекулярно-генетичних експертиз;</li>
+          <li>питань підтвердження полону та здійснення переговорного процесу по поверненню наших Захисників;</li>
+          <li>роз'яснення щодо розслідування кримінальних проваджень за фактами безвісного зникнення.</li>
+        </ul>
+
+        <p>Також надано інформацію стосовно державних соціальних гарантій для родин зниклих безвісти та загиблих військовослужбовців.</p>
+
+        <p>☝️Уповноважений наголосив на важливості комунікації з Управлінням з питань осіб, зниклих безвісти за особливих обставин (Секретаріатом Уповноваженого), зокрема, щодо інформування про стан розшуку зниклих безвісти, про роботу Єдиного реєстру осіб, зниклих безвісти за особливих обставин та його синхронізацію з інформаційними системами інших органів, уповноважених на облік та розшук осіб, зниклих безвісти за особливих обставин.</p>
+
+        <p>Нагадуємо, що по всіх питаннях, пов'язаних з пошуком та ідентифікацією зниклих безвісти осіб, а також для координації з правоохоронними органами та іншими структурами, Ви можете звертатися до Уповноваженого з питань осіб, зниклих безвісти за особливих обставин Артура Добросердова:</p>
+
+        <p>електронна адреса: <a href="mailto:pgmia@mvs.gov.ua">pgmia@mvs.gov.ua</a><br />
+        поштова адреса: вул. Богомольця, 10, м. Київ, 01601<br />
+        телефон «Гарячої лінії»: 16-98</p>
+      </div>
+      <div class="initiative-images">
+        <img src="https://i.imgur.com/2jLKpuQ.jpg" alt="Зустрічі з Об’єднаннями родин" />
+        <img src="https://i.imgur.com/ZzH7j2E.jpg" alt="Фото 2" />
+        <img src="https://i.imgur.com/TMqyRlP.jpg" alt="Фото 3" />
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 ГО «Берегині Незламності»
+  </footer>
+</body>
+</html>
+
 
 
 
