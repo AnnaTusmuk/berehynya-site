@@ -2,9 +2,8 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ініціативи</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -43,7 +42,7 @@
     /* Блок статті */
     .initiative-content {
       display: flex;
-      gap: 20px;
+      gap: 30px;
       margin-top: 30px;
       align-items: flex-start;
       border-radius: 10px;
@@ -52,27 +51,27 @@
     .initiative-images {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
       flex-shrink: 0;
-      width: 180px;
+      width: 300px;  /* збільшена ширина блоку з фото */
     }
 
     .initiative-images img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       object-fit: cover;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .initiative-text {
       background-color: #4a664a; /* зелений хакі фон */
       color: white;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
       flex-grow: 1;
       line-height: 1.6;
-      font-size: 16px;
+      font-size: 18px; /* збільшений розмір тексту */
       white-space: pre-line; /* щоб переносились рядки з тексту */
     }
   </style>
