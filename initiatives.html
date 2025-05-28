@@ -1,216 +1,132 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ініціативи</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #d3d9c1, #a5ad87);
-      color: #2f3b20;
-      margin: 0;
-      padding: 0 20px 40px 20px;
-    }
-    header {
-      background-color: #556b2f; /* темний хакі */
-      color: #f0f5e1; /* дуже світлий хакі */
-      padding: 15px 20px;
-      text-align: center;
-      text-shadow: 1px 1px 2px #37421f;
-    }
-    header h1 {
-      margin: 0 0 10px 0;
-    }
-    nav {
-      background-color: #758c4f; /* середній хакі */
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: #f0f5e1;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #c0d882;
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #556b2f;
-      color: #f0f5e1;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #d3d9c1, #a5ad87);
+  color: #2f3b20;
+  margin: 0;
+  padding: 0 20px 40px 20px;
+}
+header {
+  background-color: #556b2f;
+  color: #f0f5e1;
+  padding: 15px 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #37421f;
+}
+header h1 {
+  margin: 0 0 10px 0;
+}
+nav {
+  background-color: #758c4f;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #f0f5e1;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #c0d882;
+  text-decoration: underline;
+}
+footer {
+  background-color: #556b2f;
+  color: #f0f5e1;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
 
-    /* Блок статті */
-    .initiative-content {
-      display: flex;
-      gap: 30px;
-      margin-top: 30px;
-      align-items: flex-start;
-      border-radius: 10px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      background-color: rgba(173, 183, 125, 0.3); /* напівпрозорий світлий хакі фон */
-      padding: 25px 40px;
-      box-shadow: 0 2px 6px rgba(85, 107, 47, 0.3);
-    }
+.initiative-content {
+  display: flex;
+  gap: 30px;
+  margin: 30px auto 0 auto;
+  max-width: 900px;
+  align-items: flex-start;
+  border-radius: 10px;
+  background-color: rgba(173, 183, 125, 0.3);
+  padding: 25px 40px;
+  box-shadow: 0 2px 6px rgba(85, 107, 47, 0.3);
+}
 
-    .initiative-images {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      flex-shrink: 0;
-      width: 300px;  /* ширина блоку з фото */
-    }
+.initiative-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+  width: 300px;
+  max-width: 40%;
+}
 
-    .initiative-images img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+.initiative-images img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
 
-    .initiative-text {
-      color: #2f3b20; /* темний текст */
-      line-height: 1.6;
-      font-size: 16px;
-      white-space: pre-line;
-      flex-grow: 1;
-    }
+.initiative-text {
+  min-width: 300px;
+  flex-grow: 1;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #2f3b20;
+}
 
-    /* Для мобільної версії */
-    @media (max-width: 768px) {
-      .initiative-content {
-        flex-direction: column;
-        padding: 20px;
-      }
-      /* Контейнер для верхнього фото */
-      .initiative-top-image {
-        width: 100%;
-        margin-bottom: 20px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      }
-      .initiative-top-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-      }
-      /* Блок з іншими фото під текстом */
-      .initiative-images {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 15px;
-        margin-top: 20px;
-      }
-      .initiative-images img {
-        width: 120px;
-        flex-shrink: 0;
-        border-radius: 10px;
-      }
-      /* Приховуємо перше фото в основному блоці */
-      .initiative-images img:first-child {
-        display: none;
-      }
-      /* Текст піднімаємо над іншими фото */
-      .initiative-text {
-        order: 1;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Ініціативи</h1>
-    <nav>
-      <a href="index.html">Головна</a>
-      <a href="about.html">Про нас</a>
-      <a href="events.html">Події</a>
-      <a href="resources.html">Ресурси</a>
-      <a href="contacts.html">Контакти</a>
-    </nav>
-  </header>
+.initiative-text p {
+  margin-bottom: 1em;
+}
 
-  <!-- Перша стаття -->
-  <section class="initiative-content">
-    <!-- Верхнє фото для мобільної -->
-    <div class="initiative-top-image">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_444.jpg" alt="Фото 1" />
-    </div>
-    <div class="initiative-images">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_444.jpg" alt="Фото 1" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/4_444.jpg" alt="Фото 4" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/5_444.jpg" alt="Фото 5" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/3_444.jpg" alt="Фото 3" />
-    </div>
-    <div class="initiative-text">
-❗️Уповноважений з питань осіб, зниклих безвісти за особливих обставин Артур Добросердов провів зустрічі з Об’єднаннями родин 120-тої окремої бригади територіальної оборони (120 ОБрТрО) та 46-тої окремої аеромобільної бригади (46 ОАеМБр). Участь у заході також взяли представники ЦУ ЦВС ГШ Збройних Сил України, НПУ ГСУ та представники військових частин.
+.initiative-top-image {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-✔️ Основними темами зустрічі стали:
-- налагодження комунікації з командуванням військових частин;
-- обговорено питання, яке стосується процедури проведення службових розслідувань та отримання їх результатів родичами зниклих; 
-- повернення особистих речей зниклих безвісти Захисників;
-- складності репатріації тіл полеглих Героїв;
-- порядок призначення та проведення молекулярно-генетичних експертиз;
-- питань підтвердження полону та здійснення переговорного процесу по поверненню наших Захисників;
-- роз'яснення щодо розслідування кримінальних проваджень за фактами безвісного зникнення.
+.initiative-top-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
-Також надано інформацію стосовно державних соціальних гарантій для родин зниклих безвісти та загиблих військовослужбовців.
+@media (max-width: 768px) {
+  .initiative-content {
+    flex-direction: column;
+    padding: 20px;
+    max-width: 100%;
+  }
+  .initiative-top-image {
+    margin-bottom: 20px;
+  }
+  .initiative-images {
+    width: 100%;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+  .initiative-images img {
+    width: 120px;
+    flex-shrink: 0;
+  }
+  .initiative-images img:first-child {
+    display: none;
+  }
+  .initiative-text {
+    order: 1;
+    margin-top: 15px;
+  }
+}
 
-☝️Уповноважений наголосив на важливості комунікації з Управлінням з питань осіб, зниклих безвісти за особливих обставин (Секретаріатом Уповноваженого), зокрема, щодо інформування про стан розшуку зниклих безвісти, про роботу Єдиного реєстру осіб, зниклих безвісти за особливих обставин та його синхронізацію з інформаційними системами інших органів, уповноважених на облік та розшук осіб, зниклих безвісти за особливих обставин.
-
-Нагадуємо, що по всіх питаннях, пов'язаних з пошуком та ідентифікацією зниклих безвісти осіб, а також для координації з правоохоронними органами та іншими структурами, Ви можете звертатися до Уповноваженого з питань осіб, зниклих безвісти за особливих обставин Артура Добросердова:
-
-електронна адреса: pgmia@mvs.gov.ua
-поштова адреса: вул. Богомольця, 10, м. Київ, 01601
-телефон «Гарячої лінії»: 16-98
-    </div>
-  </section>
-
-  <!-- Друга стаття -->
-  <section class="initiative-content">
-    <!-- Верхнє фото для мобільної -->
-    <div class="initiative-top-image">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_555.jpg" alt="Фото 1" />
-    </div>
-    <div class="initiative-images">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/1_555.jpg" alt="Фото 1" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/2_555.jpg" alt="Фото 2" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/3_555.jpg" alt="Фото 3" />
-    </div>
-    <div class="initiative-text">
-‼️У Координаційному штабі відбулася зустріч з родинами полонених і зниклих безвісти військовослужбовців 120-ої окремої бригади територіальної оборони.
-
-Із присутніми та тими, хто долучився онлайн, розмовляв представник Коордштабу.
-
-➡️Обговорювали майбутнє розміщення в Особистому кабінеті інформації про наявність у відповідному реєстрі точки геолокації ймовірного зникнення Захисника, підготовку й перебіг репатріаційних заходів, які стосуються тіл та решток загиблих, висвітлювали процес їх ідентифікації через порівняння ДНК-зразків та інші види експертиз, встановлення факту смерті і проведення гідного поховання Героя.
-
-Інші важливі питання, які розглядали – коли статус «зниклий безвісти» переходить у статус «загиблий» і як родини можуть впливати на прискорення розгляду таких справ.
-
-☝️ Усі деталі цього та інших заходів Координаційного штабу з питань безвісти зниклих доступні у розділі «Новини» на сайті Міністерства оборони України.
-    </div>
-  </section>
-
-  <footer>
-    © 2025 ГО "Берегині Незламності"
-  </footer>
-</body>
-</html>
 
 
 
