@@ -246,7 +246,44 @@
 
       
 
+
 <!-- Вкладка 2 -->
+<style>
+  /* Стиль кнопок завантаження хакі */
+  .template-button {
+    display: inline-block;
+    background-color: #78866b; /* хакі */
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 10px 8px 0;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+  }
+
+  /* Ефект при наведенні */
+  .template-button:hover,
+  .template-button:focus {
+    background-color: #5a6b4f; /* темніший хакі */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    outline: none;
+  }
+
+  /* Адаптивність для мобільних */
+  @media (max-width: 600px) {
+    .template-button {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+      white-space: normal;
+    }
+  }
+</style>
+
 <div class="resource-block">
   <h2>2. Заяви для забезпечення сім'ї</h2>
   <p>1. Заява у військову частину, для подання на комісію, щоб отримати статус Учасника бойових дій.</p>
@@ -261,6 +298,9 @@
     <a href="https://github.com/AnnaTusmuk/berehynya-site/raw/main/docs/На%20матеріальну%20допомогу.docx" class="template-button" download>📄 На матеріальну допомогу</a>
   </div>
 </div>
+    
+
+    
 
 <!-- Вкладка 3 -->
 <div class="resource-block">
