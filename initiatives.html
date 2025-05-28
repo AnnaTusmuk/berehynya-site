@@ -6,49 +6,85 @@
   <title>Ініціативи</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .initiative-content {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      align-items: flex-start;
-      margin: 30px;
-      flex-wrap: wrap;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #556b2f; /* хакі */
+      padding: 15px 20px;
+      color: white;
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
 
+    .initiative-content {
+      display: flex;
+      gap: 20px;
+      margin: 30px 0;
+      align-items: flex-start;
+      min-height: 400px; /* щоб було зрозуміло структуру */
+    }
     .initiative-images {
+      flex: 0 0 300px; /* фіксована ширина для фото */
       display: flex;
       flex-direction: column;
       gap: 20px;
-      flex: 1 1 300px;
-      max-width: 320px;
     }
-
     .initiative-images img {
       width: 100%;
-      border-radius: 10px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
     }
-
     .initiative-text {
-      flex: 2 1 600px;
+      flex: 1;
       text-align: justify;
     }
-
-    ul {
+    .initiative-text ul {
       padding-left: 20px;
+      margin-top: 0;
     }
 
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #556b2f;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    /* Адаптивність */
     @media (max-width: 768px) {
       .initiative-content {
         flex-direction: column;
       }
-
-      .initiative-text {
-        order: 2;
-      }
-
       .initiative-images {
-        order: 1;
-        max-width: 100%;
+        flex: none;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+      }
+      .initiative-images img {
+        width: 30%;
+      }
+      .initiative-text {
+        margin-top: 20px;
       }
     }
   </style>
@@ -100,6 +136,7 @@
   <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
+
 
 
 
