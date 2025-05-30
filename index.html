@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ГО "Берегині Незламності"</title>
   <style>
     body {
@@ -13,7 +13,7 @@
 
     header {
       text-align: center;
-      background-color: #556B2F; /* темний хакі */
+      background-color: #556B2F; /* хакі */
       color: #fff;
       padding: 40px 20px 20px;
     }
@@ -30,7 +30,7 @@
 
     nav {
       text-align: center;
-      background-color: #6B8E23; /* світлий хакі */
+      background-color: #6B8E23; /* світліший хакі */
       padding: 18px 0;
     }
 
@@ -48,12 +48,13 @@
 
     .banner-container {
       width: 100%;
-      height: 220px; /* висота банера */
+      height: 280px; /* збільшена висота банера */
       background: linear-gradient(90deg, #556B2F 0%, #6B8E23 100%);
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      padding: 10px;
     }
 
     .banner-container img {
@@ -66,52 +67,53 @@
 
     .quote-block {
       text-align: center;
-      background-color: #f2f2f2;
+      background-color: #e2e6cd; /* блідо-хакі */
       padding: 30px 20px;
       font-size: 1.6em;
       font-style: italic;
       color: #333;
-    }
-
-    /* Світло-хакі однаковий фон для welcome і фотогалереї */
-    .pale-khaki-bg {
-      background-color: #d7e2b8; /* світлий, блідий хакі */
-      color: #556B2F; /* темно-зелений текст для контрасту */
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(85, 107, 47, 0.3);
-      padding: 30px 40px;
       max-width: 900px;
-      margin: 40px auto;
-      font-weight: 600;
-      line-height: 1.5em;
-      text-align: center;
+      margin: 30px auto 40px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(85,107,47,0.2);
     }
 
-    .pale-khaki-bg h2 {
-      margin-top: 0;
-      font-size: 2em;
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #e2e6cd; /* блідо-хакі */
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(85,107,47,0.2);
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      color: #556B2F;
       margin-bottom: 15px;
-      color: #4a5b1a; /* трохи темніший хакі відтінок для заголовку */
-      text-shadow: none;
     }
 
-    /* Фотогалерея */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eaeaea;
+      color: #666;
+    }
+
     .photo-gallery {
       max-width: 1100px;
-      margin: 40px auto;
-      padding: 30px 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(85, 107, 47, 0.3);
-      color: #556B2F;
+      margin: auto;
       text-align: center;
-      background-color: #d7e2b8; /* той самий блідий хакі фон */
+      background-color: #e2e6cd; /* блідо-хакі */
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(85,107,47,0.2);
     }
 
     .photo-gallery h2 {
       font-size: 2em;
+      color: #556B2F;
       margin-bottom: 30px;
-      color: #4a5b1a;
-      text-shadow: none;
     }
 
     .gallery-grid {
@@ -124,23 +126,13 @@
       width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(85, 107, 47, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
-      cursor: pointer;
     }
 
     .gallery-grid img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 18px rgba(85, 107, 47, 0.8);
+      transform: scale(1.03);
     }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #eaeaea;
-      color: #666;
-    }
-
   </style>
 </head>
 <body>
@@ -167,7 +159,7 @@
     <span style="font-size: 0.8em;">Сила родини, віра в правду, єдність у боротьбі.</span>
   </div>
 
-  <section class="welcome-block pale-khaki-bg">
+  <section>
     <h2>Ласкаво просимо!</h2>
     <p>Вітаємо на сайті ГО "Берегині Незламності" — організації, що об'єднує родини зниклих безвісти, полонених та загиблих бійців 120-ї бригади ТрО.</p>
   </section>
@@ -187,6 +179,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
