@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ГО "Берегині Незламності"</title>
   <style>
     body {
@@ -19,12 +19,12 @@
     }
 
     header h1 {
-      font-size: 2.4em; /* трохи зменшено */
+      font-size: 2.4em;
       margin: 0;
     }
 
     header p {
-      font-size: 1.1em; /* трохи зменшено */
+      font-size: 1.1em;
       margin-top: 10px;
     }
 
@@ -52,18 +52,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #d2c5b0; /* фон банера */
+      /* Зелений фон видалено */
+      background-color: transparent;
     }
 
     .banner-container img {
       width: 100%;
       height: auto;
-      max-height: 400px; /* збільшено трохи */
+      max-height: 380px;
       object-fit: contain;
     }
 
     .quote-block,
-    .photo-gallery,
     section.welcome-section {
       background-color: #d6d9b8; /* блідо-хакі */
       border-radius: 8px;
@@ -72,12 +72,12 @@
       padding: 25px 30px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       color: #333;
+      text-align: center;
     }
 
     .quote-block {
       font-size: 1.6em;
       font-style: italic;
-      text-align: center;
     }
 
     .quote-block span {
@@ -90,12 +90,21 @@
       font-size: 2em;
       margin-bottom: 15px;
       color: #556B2F;
-      text-align: center;
     }
 
     section.welcome-section p {
       font-size: 1.2em;
       line-height: 1.6;
+    }
+
+    .photo-gallery {
+      background-color: #d6d9b8; /* блідо-хакі */
+      border-radius: 8px;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      color: #333;
       text-align: center;
     }
 
@@ -103,21 +112,22 @@
       font-size: 2em;
       color: #556B2F;
       margin-bottom: 30px;
-      text-align: center;
     }
 
     .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: nowrap;
     }
 
     .gallery-grid img {
-      width: 100%;
+      width: calc((100% - 45px) / 4); /* 4 фото з проміжками */
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
+      object-fit: cover;
     }
 
     .gallery-grid img:hover {
@@ -129,6 +139,17 @@
       padding: 20px;
       background-color: #eaeaea;
       color: #666;
+    }
+
+    /* Адаптивність для маленьких екранів */
+    @media (max-width: 600px) {
+      .gallery-grid {
+        flex-wrap: wrap;
+      }
+      .gallery-grid img {
+        width: 48%;
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
@@ -176,6 +197,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
