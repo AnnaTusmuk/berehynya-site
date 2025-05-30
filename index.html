@@ -73,46 +73,45 @@
       color: #333;
     }
 
-    /* Стилізований хакі-блок для тексту "Ласкаво просимо" */
-    .welcome-block {
+    /* Світло-хакі однаковий фон для welcome і фотогалереї */
+    .pale-khaki-bg {
+      background-color: #d7e2b8; /* світлий, блідий хакі */
+      color: #556B2F; /* темно-зелений текст для контрасту */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(85, 107, 47, 0.3);
+      padding: 30px 40px;
       max-width: 900px;
       margin: 40px auto;
-      background-color: #6B8E23; /* світлий хакі */
-      color: #f0f0dc;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(75, 95, 32, 0.5);
-      font-size: 1.3em;
-      line-height: 1.5em;
       font-weight: 600;
+      line-height: 1.5em;
       text-align: center;
     }
 
-    .welcome-block h2 {
+    .pale-khaki-bg h2 {
       margin-top: 0;
       font-size: 2em;
       margin-bottom: 15px;
-      color: #fefefe;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      color: #4a5b1a; /* трохи темніший хакі відтінок для заголовку */
+      text-shadow: none;
     }
 
-    /* Стилізований хакі-блок для фотогалереї */
+    /* Фотогалерея */
     .photo-gallery {
       max-width: 1100px;
       margin: 40px auto;
-      background-color: #556B2F; /* темний хакі */
       padding: 30px 30px 40px;
       border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(40, 50, 10, 0.7);
-      color: #e6e6cc;
+      box-shadow: 0 4px 12px rgba(85, 107, 47, 0.3);
+      color: #556B2F;
+      text-align: center;
+      background-color: #d7e2b8; /* той самий блідий хакі фон */
     }
 
     .photo-gallery h2 {
       font-size: 2em;
-      color: #f0f0dc;
       margin-bottom: 30px;
-      text-align: center;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      color: #4a5b1a;
+      text-shadow: none;
     }
 
     .gallery-grid {
@@ -125,14 +124,14 @@
       width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(85, 107, 47, 0.5);
       transition: transform 0.3s ease;
       cursor: pointer;
     }
 
     .gallery-grid img:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 18px rgba(85, 107, 47, 0.8);
     }
 
     footer {
@@ -168,7 +167,7 @@
     <span style="font-size: 0.8em;">Сила родини, віра в правду, єдність у боротьбі.</span>
   </div>
 
-  <section class="welcome-block">
+  <section class="welcome-block pale-khaki-bg">
     <h2>Ласкаво просимо!</h2>
     <p>Вітаємо на сайті ГО "Берегині Незламності" — організації, що об'єднує родини зниклих безвісти, полонених та загиблих бійців 120-ї бригади ТрО.</p>
   </section>
@@ -188,6 +187,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
