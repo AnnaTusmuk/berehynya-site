@@ -12,23 +12,27 @@
       margin: 0;
       padding: 0 20px 40px 20px;
     }
+
     header {
-      background-color: #556b2f; /* темний хакі */
-      color: #f0f5e1; /* дуже світлий хакі */
+      background-color: #556b2f;
+      color: #f0f5e1;
       padding: 15px 20px;
       text-align: center;
       text-shadow: 1px 1px 2px #37421f;
     }
+
     header h1 {
       margin: 0 0 10px 0;
     }
+
     nav {
-      background-color: #758c4f; /* середній хакі */
+      background-color: #758c4f;
       display: flex;
       justify-content: center;
       padding: 10px;
       flex-wrap: wrap;
     }
+
     nav a {
       color: #f0f5e1;
       text-decoration: none;
@@ -37,10 +41,12 @@
       font-size: 1.1em;
       transition: color 0.3s ease;
     }
+
     nav a:hover {
       color: #c0d882;
       text-decoration: underline;
     }
+
     footer {
       background-color: #556b2f;
       color: #f0f5e1;
@@ -50,7 +56,16 @@
       font-size: 0.9em;
     }
 
-    /* Блок статті */
+    .slogan {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      margin: 30px auto;
+      max-width: 800px;
+      color: #2f3b20;
+      text-shadow: 1px 1px 2px rgba(85, 107, 47, 0.3);
+    }
+
     .initiative-content {
       display: flex;
       gap: 30px;
@@ -60,7 +75,7 @@
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
-      background-color: rgba(173, 183, 125, 0.3); /* напівпрозорий світлий хакі фон */
+      background-color: rgba(173, 183, 125, 0.3);
       padding: 25px 40px;
       box-shadow: 0 2px 6px rgba(85, 107, 47, 0.3);
     }
@@ -70,7 +85,7 @@
       flex-direction: column;
       gap: 20px;
       flex-shrink: 0;
-      width: 300px;  /* ширина блоку з фото */
+      width: 300px;
     }
 
     .initiative-images img {
@@ -78,48 +93,29 @@
       height: auto;
       border-radius: 10px;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .initiative-text {
-      color: #2f3b20; /* темний текст */
+      color: #2f3b20;
       line-height: 1.6;
       font-size: 16px;
       white-space: pre-line;
       flex-grow: 1;
     }
 
-
-<head>
-  <style>
-    /* Основні стилі тут */
-    body { ... }
-    header { ... }
-    .initiative-content { ... }
-    /* інші стилі */
-
-      .slogan {
-  font-size: 1.6em; /* або збільшити до 2em, якщо треба ще більше */
-  font-weight: bold;
-  text-align: center;
-  margin: 30px auto;
-  max-width: 800px;
-  color: #2f3b20;
-  text-shadow: 1px 1px 2px rgba(85, 107, 47, 0.3);
-}
-
-
-    /* Медіазапити в кінці */
     @media (max-width: 768px) {
       .initiative-content {
         flex-direction: column;
         padding: 20px;
       }
+
       .initiative-images {
         order: 2;
         width: 100%;
         margin-top: 20px;
       }
+
       .initiative-text {
         order: 1;
       }
@@ -137,10 +133,10 @@
       <a href="contacts.html">Контакти</a>
     </nav>
   </header>
-  <div class="page-wrapper">
+
   <div class="slogan">
-  Кожен крок – ближче до зустрічі! Кожна справа – заради них!
-</body>
+    Кожен крок – ближче до зустрічі! Кожна справа – заради них!
+  </div>
 
     
 
