@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
@@ -47,26 +47,21 @@
       text-decoration: underline;
     }
 
-.banner-container {
-  width: 100%;
-  background-color: #d2c5b0; /* колір фону з банера */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
+    .banner-container {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #d2c5b0; /* фон банера */
+    }
 
-.banner-container img {
-  max-height: 320px;
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-}
-
-
-
-
-
+    .banner-container img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+    }
 
     .quote-block {
       text-align: center;
@@ -90,7 +85,6 @@
       color: #666;
     }
 
-    /* Галерея */
     .photo-gallery {
       padding: 40px 20px;
       max-width: 1100px;
@@ -139,7 +133,7 @@
   </nav>
 
   <div class="banner-container">
-    <img src="resources/photo_2025-05-14_00-48-46.jpg" alt="Банер ГО Берегині Незламності" />
+    <img src="resources/banner_for_site.jpg" alt="Банер ГО Берегині Незламності" />
   </div>
 
   <div class="quote-block">
