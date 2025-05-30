@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ГО "Берегині Незламності"</title>
   <style>
     body {
@@ -13,7 +13,7 @@
 
     header {
       text-align: center;
-      background-color: #556B2F; /* хакі */
+      background-color: #556B2F; /* темний хакі */
       color: #fff;
       padding: 40px 20px 20px;
     }
@@ -30,7 +30,7 @@
 
     nav {
       text-align: center;
-      background-color: #6B8E23; /* світліший хакі */
+      background-color: #6B8E23; /* світлий хакі */
       padding: 18px 0;
     }
 
@@ -48,19 +48,20 @@
 
     .banner-container {
       width: 100%;
-      max-height: 200px; /* обмежує висоту банера */
-      overflow: hidden;
-      background-color: #d2c5b0; /* фон банера */
+      height: 220px; /* висота банера */
+      background: linear-gradient(90deg, #556B2F 0%, #6B8E23 100%); /* плавний хакі фон */
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
     .banner-container img {
-      height: 100%;
+      max-height: 100%;
       width: auto;
-      max-width: 100%;
-      object-fit: contain; /* зберігає зображення повністю */
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
     .quote-block {
@@ -146,6 +147,7 @@
     <p>Вітаємо на сайті ГО "Берегині Незламності" — організації, що об'єднує родини зниклих безвісти, полонених та загиблих бійців 120-ї бригади ТрО.</p>
   </section>
 
+  <!-- Галерея -->
   <section class="photo-gallery">
     <h2>Фото з нашої діяльності</h2>
     <div class="gallery-grid">
@@ -161,6 +163,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
