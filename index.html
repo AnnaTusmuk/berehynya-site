@@ -19,12 +19,12 @@
     }
 
     header h1 {
-      font-size: 2.8em;
+      font-size: 2.4em; /* трохи зменшено */
       margin: 0;
     }
 
     header p {
-      font-size: 1.4em;
+      font-size: 1.1em; /* трохи зменшено */
       margin-top: 10px;
     }
 
@@ -48,72 +48,62 @@
 
     .banner-container {
       width: 100%;
-      height: 280px; /* збільшена висота банера */
-      background: linear-gradient(90deg, #556B2F 0%, #6B8E23 100%);
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      padding: 10px;
+      background-color: #d2c5b0; /* фон банера */
     }
 
     .banner-container img {
-      max-height: 100%;
-      width: auto;
+      width: 100%;
+      height: auto;
+      max-height: 400px; /* збільшено трохи */
       object-fit: contain;
+    }
+
+    .quote-block,
+    .photo-gallery,
+    section.welcome-section {
+      background-color: #d6d9b8; /* блідо-хакі */
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      color: #333;
     }
 
     .quote-block {
-      text-align: center;
-      background-color: #e2e6cd; /* блідо-хакі */
-      padding: 30px 20px;
       font-size: 1.6em;
       font-style: italic;
-      color: #333;
-      max-width: 900px;
-      margin: 30px auto 40px;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(85,107,47,0.2);
+      text-align: center;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background-color: #e2e6cd; /* блідо-хакі */
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(85,107,47,0.2);
-      margin-bottom: 40px;
+    .quote-block span {
+      font-size: 0.8em;
+      display: block;
+      margin-top: 8px;
     }
 
-    section h2 {
-      color: #556B2F;
+    section.welcome-section h2 {
+      font-size: 2em;
       margin-bottom: 15px;
+      color: #556B2F;
+      text-align: center;
     }
 
-    footer {
+    section.welcome-section p {
+      font-size: 1.2em;
+      line-height: 1.6;
       text-align: center;
-      padding: 20px;
-      background-color: #eaeaea;
-      color: #666;
-    }
-
-    .photo-gallery {
-      max-width: 1100px;
-      margin: auto;
-      text-align: center;
-      background-color: #e2e6cd; /* блідо-хакі */
-      padding: 40px 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(85,107,47,0.2);
     }
 
     .photo-gallery h2 {
       font-size: 2em;
       color: #556B2F;
       margin-bottom: 30px;
+      text-align: center;
     }
 
     .gallery-grid {
@@ -132,6 +122,13 @@
 
     .gallery-grid img:hover {
       transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eaeaea;
+      color: #666;
     }
   </style>
 </head>
@@ -156,10 +153,10 @@
 
   <div class="quote-block">
     Разом — заради кожного, хто ще не повернувся.<br />
-    <span style="font-size: 0.8em;">Сила родини, віра в правду, єдність у боротьбі.</span>
+    <span>Сила родини, віра в правду, єдність у боротьбі.</span>
   </div>
 
-  <section>
+  <section class="welcome-section">
     <h2>Ласкаво просимо!</h2>
     <p>Вітаємо на сайті ГО "Берегині Незламності" — організації, що об'єднує родини зниклих безвісти, полонених та загиблих бійців 120-ї бригади ТрО.</p>
   </section>
@@ -179,6 +176,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
