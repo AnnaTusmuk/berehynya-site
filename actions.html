@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Акції</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .subnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #ccc;
+    }
+    .subnav a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+    }
+    .subnav a:hover {
+      background-color: #d0d0d0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,23 +40,27 @@
       <a href="actions.html">Акції</a>
       <a href="contacts.html">Контакти</a>
     </nav>
+
+    <nav class="subnav">
+      <a href="#">Вінниця</a>
+      <a href="#">Калинівка</a>
+      <a href="#">Тульчин</a>
+      <a href="#">Ладижин</a>
+      <a href="#">Гайсин</a>
+      <a href="#">Одеса</a>
+      <a href="#">Кропивницький</a>
+      <a href="#">Київ</a>
+      <a href="#">Львів</a>
+      <a href="#">Самгородок</a>
+      <a href="#">Івано-Франківськ</a>
+    </nav>
   </header>
+
   <section>
-    <h2>Міста</h2>
-    <ul>
-      <li><a href="#">Вінниця</a></li>
-      <li><a href="#">Калинівка</a></li>
-      <li><a href="#">Тульчин</a></li>
-      <li><a href="#">Ладижин</a></li>
-      <li><a href="#">Гайсин</a></li>
-      <li><a href="#">Одеса</a></li>
-      <li><a href="#">Кропивницький</a></li>
-      <li><a href="#">Київ</a></li>
-      <li><a href="#">Львів</a></li>
-      <li><a href="#">Самгородок</a></li>
-      <li><a href="#">Івано-Франківськ</a></li>
-    </ul>
+    <p>Оберіть місто, щоб переглянути акції, що відбулися або плануються в ньому.</p>
   </section>
+
   <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
+
