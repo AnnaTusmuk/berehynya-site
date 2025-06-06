@@ -3,109 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Акція — Київ</title>
+  <title>Акції по містах</title>
+
+  <!-- якщо є зовнішній CSS — лишіть; усі критичні стилі додані тут -->
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    .subnav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      border-bottom: 2px solid #006400;
-      padding-bottom: 8px;
-      margin-top: 15px;
-      font-weight: 600;
-      font-size: 16px;
-    }
+    /* ---- базові стилі ---- */
+    body{margin:0;font-family:system-ui,Arial,sans-serif}
+    header{padding:20px;background:#f0f0f0}
+    h1{margin:0 0 10px}
 
-    .subnav a {
-      color: #006400;
-      text-decoration: none;
-      padding-bottom: 5px;
-      border-bottom: 3px solid transparent;
-      transition: border-color 0.3s;
-    }
+    /* ---- головне меню ---- */
+    nav.main{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+    nav.main a{color:#006400;text-decoration:none;font-weight:600;
+               padding:5px 10px;border-radius:5px;transition:background .3s}
+    nav.main a:hover,nav.main a.active{background:#e0f5e0;color:#228B22}
 
-    .subnav a:hover,
-    .subnav a.active {
-      border-bottom-color: #228B22;
-      color: #228B22;
-    }
+    /* ---- підменю міст ---- */
+    nav.subnav{display:flex;flex-wrap:wrap;gap:15px;border-bottom:2px solid #006400;
+               padding-bottom:8px;font-weight:600;font-size:16px}
+    nav.subnav a{color:#006400;text-decoration:none;padding-bottom:5px;
+                 border-bottom:3px solid transparent;transition:border-color .3s}
+    nav.subnav a:hover,nav.subnav a.active{
+      border-bottom-color:#228B22;color:#228B22}
 
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 30px;
-      padding: 20px;
-    }
+    /* ---- блок контенту міста ---- */
+    .content{display:none;flex-wrap:wrap;gap:30px;padding:20px}
+    .content.active{display:flex}
 
-    .content video {
-      max-width: 500px;
-      width: 100%;
-      border-radius: 12px;
-    }
+    .content video,.content img{max-width:500px;width:100%;border-radius:12px}
+    .content .text{flex:1;min-width:280px;font-size:18px;line-height:1.6}
 
-    .content .text {
-      flex: 1;
-      min-width: 300px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
+    footer{margin-top:40px;text-align:center;font-size:14px;color:#666;padding:20px}
   </style>
 </head>
 <body>
+
   <header>
     <h1>Акції</h1>
-    <nav>
-      <a href="index.html">Головна</a>
-      <a href="about.html">Про нас</a>
-      <a href="initiatives.html">Ініціативи</a>
-      <a href="events.html">Події</a>
-      <a href="resources.html">Ресурси</a>
-      <a href="fallen.html">Полеглі Герої</a>
-      <a href="actions.html" class="active">Акції</a>
-      <a href="contacts.html">Контакти</a>
+
+    <!-- головне меню -->
+    <nav class="main">
+      <a href="#" class="active">Головна</a>
+      <a href="#">Про нас</a>
+      <a href="#">Ініціативи</a>
+      <a href="#">Події</a>
+      <a href="#">Ресурси</a>
+      <a href="#">Полеглі Герої</a>
+      <a href="#" class="active">Акції</a>
+      <a href="#">Контакти</a>
     </nav>
 
+    <!-- підменю міст -->
     <nav class="subnav">
-      <a href="#">Вінниця</a>
-      <a href="#">Калинівка</a>
-      <a href="#">Тульчин</a>
-      <a href="#">Ладижин</a>
-      <a href="#">Гайсин</a>
-      <a href="#">Одеса</a>
-      <a href="#">Кропивницький</a>
-      <a href="#" class="active">Київ</a>
-      <a href="#">Львів</a>
-      <a href="#">Самгородок</a>
-      <a href="#">Івано-Франківськ</a>
+      <a href="#" data-city="vinnytsia">Вінниця</a>
+      <a href="#" data-city="kalynivka">Калинівка</a>
+      <a href="#" data-city="tulchyn">Тульчин</a>
+      <a href="#" data-city="ladyzhyn">Ладижин</a>
+      <a href="#" data-city="haisyn">Гайсин</a>
+      <a href="#" data-city="odesa">Одеса</a>
+      <a href="#" data-city="kropyvnytskyi">Кропивницький</a>
+      <a href="#" data-city="kyiv" class="active">Київ</a>
+      <a href="#" data-city="lviv">Львів</a>
+      <a href="#" data-city="samhorodok">Самгородок</a>
+      <a href="#" data-city="ivano-frankivsk">Івано-Франківськ</a>
+      <a href="#" data-city="mohyliv-podilskyi">Могилів-Подільський</a>
     </nav>
   </header>
 
-  <section class="content">
+  <!-- ======================== КИЇВ ======================== -->
+  <section class="content active" id="kyiv">
     <video controls>
       <source src="new-file/video_2025-06-04_13-42-46 (1).mp4" type="video/mp4">
       Ваш браузер не підтримує відео.
     </video>
-
     <div class="text">
       <p><strong>До Дня Територіальної оборони України</strong> на Майдані Незалежності відбулася зворушлива акція.</p>
-      <p>Мирна акція була організована Об'єднанням родин Захисників Територіальної оборони "Жінки ТРО". До цієї акції доєднались рідні різних бригад ТрО та небайдужі громадяни, щоб вклонитися мужності й самопожертві наших захисників. Вони віддали шану пам’яті загиблих героїв, висловили глибоку підтримку тим, хто зараз перебуває в полоні, і з великою повагою згадали тих, хто зник безвісти, залишаючись у тіні війни та болю.</p>
-      <p>Ця акція — не просто символічний жест, а живе нагадування про ті страшні випробування, які сьогодні переживає наша країна. Пам’ять про полеглих і надія на повернення живих з полону об’єднують усіх нас. Родини, які чекають на своїх близьких, заслуговують на підтримку і турботу.</p>
-      <p>Серед учасників заходу були представники командування сил Територіальної Оборони, офісу Уповноваженого Верховної Ради з прав людини та Управління з питань осіб, зниклих безвісти за особливих обставин Міністерства внутрішніх справ. Їхня присутність стала свідченням важливості спільної роботи держави та громадськості заради підтримки тих, хто шукає та чекає на повернення своїх рідних.</p>
-      <p><strong>Ця акція — крик серця, який нагадує всім нам: ми пам’ятаємо, ми чекаємо, ми боремося разом.</strong></p>
-      <p><strong>Разом ми непереможні! Разом ми сильніші за будь-які випробування!</strong></p>
+      <p>Мирна акція була організована Об'єднанням родин Захисників ТрО «Жінки ТРО» та небайдужими громадянами…</p>
+      <p><strong>Разом ми непереможні!</strong></p>
     </div>
   </section>
 
-  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
+  <!-- ======================== ОДЕСА ======================= -->
+  <section class="content" id="odesa">
+    <div class="text">
+      <p><strong>В Одесі</strong> відбулася щонедільна акція-нагадування «Не мовчи! Полон вбиває!».</p>
+      <p>Її організувала ГО «Серце Одеси в полоні». Долучилися й родини 120-ї ОБр ТрО…</p>
+      <p>Учасники тримали в руках фото рідних, плакати «Поверніть з полону!», «Розшукайте зниклих!»…</p>
+    </div>
+    <video controls>
+      <source src="new-file/video_odesa.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- =========== Шаблони для інших міст (заповніть) ======= -->
+  <section class="content" id="vinnytsia">
+    <div class="text"><p><strong>Вінниця.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="kalynivka">
+    <div class="text"><p><strong>Калинівка.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="tulchyn">
+    <div class="text"><p><strong>Тульчин.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="ladyzhyn">
+    <div class="text"><p><strong>Ладижин.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="haisyn">
+    <div class="text"><p><strong>Гайсин.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="kropyvnytskyi">
+    <div class="text"><p><strong>Кропивницький.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="lviv">
+    <div class="text"><p><strong>Львів.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="samhorodok">
+    <div class="text"><p><strong>Самгородок.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="ivano-frankivsk">
+    <div class="text"><p><strong>Івано-Франківськ.</strong> TODO — додайте контент.</p></div>
+  </section>
+
+  <section class="content" id="mohyliv-podilskyi">
+    <div class="text"><p><strong>Могилів-Подільський.</strong> TODO — додайте контент.</p></div>
+  </section>
+  <!-- ===================================================== -->
+
+  <footer>&copy; 2025 ГО «Берегині Незламності»</footer>
+
+  <!-- ===== JS: перемикання підвкладок ===== -->
+  <script>
+    const subnavLinks = document.querySelectorAll('.subnav a');
+    const sections     = document.querySelectorAll('.content');
+
+    subnavLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        // активна кнопка
+        subnavLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        const id = link.dataset.city;      // значення data-city
+
+        // показ потрібної секції
+        sections.forEach(sec => {
+          sec.classList.toggle('active', sec.id === id);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
 
