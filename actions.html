@@ -5,37 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Акції по містах</title>
 
-  <!-- якщо є зовнішній CSS — лишіть; усі критичні стилі додані тут -->
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ---- базові стилі ---- */
-    body{margin:0;font-family:system-ui,Arial,sans-serif}
-    header{padding:20px;background:#f0f0f0}
-    h1{margin:0 0 10px}
+    body { margin: 0; font-family: system-ui, Arial, sans-serif }
+    header { padding: 20px; background: #f0f0f0 }
+    h1 { margin: 0 0 10px }
 
-    /* ---- головне меню ---- */
-    nav.main{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
-    nav.main a{color:#006400;text-decoration:none;font-weight:600;
-               padding:5px 10px;border-radius:5px;transition:background .3s}
-    nav.main a:hover,nav.main a.active{background:#e0f5e0;color:#228B22}
+    nav.main {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px
+    }
+    nav.main a {
+      color: #006400; text-decoration: none; font-weight: 600;
+      padding: 5px 10px; border-radius: 5px; transition: background .3s
+    }
+    nav.main a:hover, nav.main a.active {
+      background: #e0f5e0; color: #228B22
+    }
 
-    /* ---- підменю міст ---- */
-    nav.subnav{display:flex;flex-wrap:wrap;gap:15px;border-bottom:2px solid #006400;
-               padding-bottom:8px;font-weight:600;font-size:16px}
-    nav.subnav a{color:#006400;text-decoration:none;padding-bottom:5px;
-                 border-bottom:3px solid transparent;transition:border-color .3s}
-    nav.subnav a:hover,nav.subnav a.active{
-      border-bottom-color:#228B22;color:#228B22}
+    nav.subnav {
+      display: flex; flex-wrap: wrap; gap: 15px;
+      border-bottom: 2px solid #006400; padding-bottom: 8px;
+      font-weight: 600; font-size: 16px
+    }
+    nav.subnav a {
+      color: #006400; text-decoration: none; padding-bottom: 5px;
+      border-bottom: 3px solid transparent; transition: border-color .3s
+    }
+    nav.subnav a:hover, nav.subnav a.active {
+      border-bottom-color: #228B22; color: #228B22
+    }
 
-    /* ---- блок контенту міста ---- */
-    .content{display:none;flex-wrap:wrap;gap:30px;padding:20px}
-    .content.active{display:flex}
+    .content {
+      display: none; flex-wrap: wrap; gap: 30px; padding: 20px
+    }
+    .content.active { display: flex }
 
-    .content video,.content img{max-width:500px;width:100%;border-radius:12px}
-    .content .text{flex:1;min-width:280px;font-size:18px;line-height:1.6}
+    .content video, .content img {
+      max-width: 500px; width: 100%; border-radius: 12px
+    }
+    .content .text {
+      flex: 1; min-width: 280px;
+      font-size: 18px; line-height: 1.6
+    }
 
-    footer{margin-top:40px;text-align:center;font-size:14px;color:#666;padding:20px}
+    footer {
+      margin-top: 40px; text-align: center;
+      font-size: 14px; color: #666; padding: 20px
+    }
   </style>
 </head>
 <body>
@@ -43,7 +60,6 @@
   <header>
     <h1>Акції</h1>
 
-    <!-- головне меню -->
     <nav class="main">
       <a href="#" class="active">Головна</a>
       <a href="#">Про нас</a>
@@ -55,7 +71,6 @@
       <a href="#">Контакти</a>
     </nav>
 
-    <!-- підменю міст -->
     <nav class="subnav">
       <a href="#" data-city="vinnytsia">Вінниця</a>
       <a href="#" data-city="kalynivka">Калинівка</a>
@@ -72,7 +87,7 @@
     </nav>
   </header>
 
-  <!-- ======================== КИЇВ ======================== -->
+  <!-- ===== КИЇВ ===== -->
   <section class="content active" id="kyiv">
     <video controls>
       <source src="new-file/video_2025-06-04_13-42-46 (1).mp4" type="video/mp4">
@@ -85,63 +100,33 @@
     </div>
   </section>
 
-  <!-- ======================== ОДЕСА ======================= -->
+  <!-- ===== ОДЕСА (оновлено!) ===== -->
   <section class="content" id="odesa">
     <div class="text">
       <p><strong>В Одесі</strong> відбулася щонедільна акція-нагадування «Не мовчи! Полон вбиває!».</p>
       <p>Її організувала ГО «Серце Одеси в полоні». Долучилися й родини 120-ї ОБр ТрО…</p>
       <p>Учасники тримали в руках фото рідних, плакати «Поверніть з полону!», «Розшукайте зниклих!»…</p>
     </div>
-    <video controls>
-      <source src="new-file/video_odesa.mp4" type="video/mp4">
-    </video>
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_11.png" alt="Одеса фото 1">
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_22.png" alt="Одеса фото 2">
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_33.JPG" alt="Одеса фото 3">
+    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_44.jpg" alt="Одеса фото 4">
   </section>
 
-  <!-- =========== Шаблони для інших міст (заповніть) ======= -->
-  <section class="content" id="vinnytsia">
-    <div class="text"><p><strong>Вінниця.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="kalynivka">
-    <div class="text"><p><strong>Калинівка.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="tulchyn">
-    <div class="text"><p><strong>Тульчин.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="ladyzhyn">
-    <div class="text"><p><strong>Ладижин.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="haisyn">
-    <div class="text"><p><strong>Гайсин.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="kropyvnytskyi">
-    <div class="text"><p><strong>Кропивницький.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="lviv">
-    <div class="text"><p><strong>Львів.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="samhorodok">
-    <div class="text"><p><strong>Самгородок.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="ivano-frankivsk">
-    <div class="text"><p><strong>Івано-Франківськ.</strong> TODO — додайте контент.</p></div>
-  </section>
-
-  <section class="content" id="mohyliv-podilskyi">
-    <div class="text"><p><strong>Могилів-Подільський.</strong> TODO — додайте контент.</p></div>
-  </section>
-  <!-- ===================================================== -->
+  <!-- ===== Порожні секції інших міст ===== -->
+  <section class="content" id="vinnytsia"><div class="text"><p><strong>Вінниця.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="kalynivka"><div class="text"><p><strong>Калинівка.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="tulchyn"><div class="text"><p><strong>Тульчин.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="ladyzhyn"><div class="text"><p><strong>Ладижин.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="haisyn"><div class="text"><p><strong>Гайсин.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="kropyvnytskyi"><div class="text"><p><strong>Кропивницький.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="lviv"><div class="text"><p><strong>Львів.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="samhorodok"><div class="text"><p><strong>Самгородок.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="ivano-frankivsk"><div class="text"><p><strong>Івано-Франківськ.</strong> TODO — додайте контент.</p></div></section>
+  <section class="content" id="mohyliv-podilskyi"><div class="text"><p><strong>Могилів-Подільський.</strong> TODO — додайте контент.</p></div></section>
 
   <footer>&copy; 2025 ГО «Берегині Незламності»</footer>
 
-  <!-- ===== JS: перемикання підвкладок ===== -->
   <script>
     const subnavLinks = document.querySelectorAll('.subnav a');
     const sections     = document.querySelectorAll('.content');
@@ -149,14 +134,10 @@
     subnavLinks.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
-
-        // активна кнопка
         subnavLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
 
-        const id = link.dataset.city;      // значення data-city
-
-        // показ потрібної секції
+        const id = link.dataset.city;
         sections.forEach(sec => {
           sec.classList.toggle('active', sec.id === id);
         });
@@ -165,6 +146,7 @@
   </script>
 </body>
 </html>
+
 
 
 
