@@ -1,5 +1,118 @@
 <!DOCTYPE html>
-<html lang='uk'>
-<head><meta charset='UTF-8'><title>Одеса</title></head>
-<body><h1>Одеса</h1></body>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Акції в Одесі</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .city-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .city-buttons a {
+      background-color: #4b6043;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .city-buttons a:hover {
+      background-color: #2e4d2e;
+    }
+
+    .content-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px;
+      align-items: flex-start;
+    }
+
+    .image-column {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .image-column img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .text-block {
+      flex: 2 1 500px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 800px) {
+      .content-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-column, .text-block {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Акції в Одесі</h1>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="initiatives.html">Ініціативи</a>
+      <a href="events.html">Події</a>
+      <a href="resources.html">Ресурси</a>
+      <a href="fallen.html">Полеглі Герої</a>
+      <a href="actions.html" class="active">Акції</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="city-buttons">
+      <a href="actions-vinnytsia.html">Вінниця</a>
+      <a href="actions-kyiv.html">Київ</a>
+      <a href="actions-odesa.html" class="active">Одеса</a>
+      <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
+      <a href="actions-kalynivka.html">Калинівка</a>
+      <a href="actions-tulchyn.html">Тульчин</a>
+      <a href="actions-ladyzhyn.html">Ладижин</a>
+      <a href="actions-haisyn.html">Гайсин</a>
+      <a href="actions-kropyvnytskyi.html">Кропивницький</a>
+      <a href="actions-lviv.html">Львів</a>
+      <a href="actions-ivano-frankivsk.html">Івано-Франківськ</a>
+    </div>
+
+    <div class="content-flex">
+      <div class="image-column">
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_11.png" alt="Фото 1">
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_22.png" alt="Фото 2">
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_33.JPG" alt="Фото 3">
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_44.jpg" alt="Фото 4">
+      </div>
+      <div class="text-block">
+        <p>В Одесі відбулась щонедільна акція-нагадування про військовополонених Маріупольського гарнізону, всіх полонених та безвісти зниклих "Не мовчи! Полон вбиває!". Її організувала ГО "Серце Одеси в полоні". До цієї акції доєднались й родини 120-ї ОБр ТрО.</p>
+        <p>Пройшла мирна акція, що об’єднала родини військовослужбовців, які потрапили в полон та зникли безвісти під час бойових дій. До заходу долучилися рідні бійців із різних підрозділів, зокрема і 120-ї окремої бригади територіальної оборони. Мета акції — нагадати суспільству, владі та міжнародним організаціям про тих, хто досі не повернувся з війни й чия доля залишається невідомою.</p>
+        <p>Учасники тримали в руках фото своїх рідних, плакати з написами «Поверніть з полону!», «Розшукайте зниклих!», «Чекаємо кожного!». Серед присутніх — батьки, дружини, діти й друзі, які щодня живуть у невизначеності та болісному очікуванні.</p>
+        <p>Подібні акції не є поодинокими. Вони проходять у різних містах України, бо родини не хочуть і не можуть мовчати. Вони прагнуть, щоб питання пошуку зниклих та повернення полонених залишалося в центрі уваги. Вимагають прозорих механізмів обміну, активної роботи міжнародних організацій і постійного суспільного тиску.</p>
+        <p>Ця одеська акція стала черговим нагадуванням: війна не завершується для родин, поки не повернеться останній боєць. І доки вони не вдома, ми маємо бути голосом тих, хто не може заговорити сам.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
+</body>
 </html>
+
