@@ -3,88 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Акції по містах</title>
+  <title>Акції в Києві</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body { margin: 0; font-family: system-ui, Arial, sans-serif }
-    header { padding: 20px; background: #f0f0f0 }
-    h1 { margin: 0 0 10px }
-
-    nav.main {
-      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px
-    }
-    nav.main a {
-      color: #006400; text-decoration: none; font-weight: 600;
-      padding: 5px 10px; border-radius: 5px; transition: background .3s
-    }
-    nav.main a:hover, nav.main a.active {
-      background: #e0f5e0; color: #228B22
-    }
-
-    .city-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-    .city-list a {
-      background: #f5f5f5;
-      border: 2px solid #ccc;
-      padding: 15px;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      color: #006400;
-      transition: all .3s ease;
-    }
-    .city-list a:hover {
-      background: #e0f5e0;
-      border-color: #228B22;
-      color: #228B22;
-    }
-
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-      padding: 20px;
-    }
-  </style>
 </head>
 <body>
-
   <header>
-    <h1>Акції по містах</h1>
-    <nav class="main">
+    <h1>Акції в Києві</h1>
+    <nav>
       <a href="index.html">Головна</a>
       <a href="about.html">Про нас</a>
       <a href="initiatives.html">Ініціативи</a>
       <a href="events.html">Події</a>
       <a href="resources.html">Ресурси</a>
-      <a href="heroes.html">Полеглі Герої</a>
-      <a href="actions.html" class="active">Акції</a>
+      <a href="fallen.html">Полеглі Герої</a>
+      <a href="actions.html">Акції</a>
       <a href="contacts.html">Контакти</a>
     </nav>
   </header>
 
-  <div class="city-list">
-    <a href="actions-kyiv.html">Київ</a>
-    <a href="actions-odesa.html">Одеса</a>
-    <a href="actions-vinnytsia.html">Вінниця</a>
-    <a href="actions-kalynivka.html">Калинівка</a>
-    <a href="actions-tulchyn.html">Тульчин</a>
-    <a href="actions-ladyzhyn.html">Ладижин</a>
-    <a href="actions-haisyn.html">Гайсин</a>
-    <a href="actions-kropyvnytskyi.html">Кропивницький</a>
-    <a href="actions-lviv.html">Львів</a>
-    <a href="actions-samhorodok.html">Самгородок</a>
-    <a href="actions-ivano-frankivsk.html">Івано-Франківськ</a>
-    <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
-  </div>
+  <section>
+    <div class="subnav">
+      <a href="actions-vinnytsia.html">Вінниця</a>
+      <a href="actions-kyiv.html" class="active">Київ</a>
+      <a href="actions-odesa.html">Одеса</a>
+      <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
+      <a href="actions-kalynivka.html">Калинівка</a>
+      <a href="actions-tulchyn.html">Тульчин</a>
+      <a href="actions-ladyzhyn.html">Ладижин</a>
+      <a href="actions-haisyn.html">Гайсин</a>
+      <a href="actions-kropyvnytskyi.html">Кропивницький</a>
+      <a href="actions-lviv.html">Львів</a>
+      <a href="actions-ivano-frankivsk.html">Івано-Франківськ</a>
+    </div>
 
-  <footer>&copy; 2025 ГО «Берегині Незламності»</footer>
+    <p>Тут буде інформація про акції, що відбувалися або плануються у Києві.</p>
+  </section>
 
+  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
