@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Акції по містах</title>
-
   <link rel="stylesheet" href="style.css" />
-
   <style>
     body { margin: 0; font-family: system-ui, Arial, sans-serif }
     header { padding: 20px; background: #f0f0f0 }
@@ -23,131 +21,70 @@
       background: #e0f5e0; color: #228B22
     }
 
-    nav.subnav {
-      display: flex; flex-wrap: wrap; gap: 15px;
-      border-bottom: 2px solid #006400; padding-bottom: 8px;
-      font-weight: 600; font-size: 16px
+    .city-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
     }
-    nav.subnav a {
-      color: #006400; text-decoration: none; padding-bottom: 5px;
-      border-bottom: 3px solid transparent; transition: border-color .3s
+    .city-list a {
+      background: #f5f5f5;
+      border: 2px solid #ccc;
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      color: #006400;
+      transition: all .3s ease;
     }
-    nav.subnav a:hover, nav.subnav a.active {
-      border-bottom-color: #228B22; color: #228B22
-    }
-
-    .content {
-      display: none; flex-wrap: wrap; gap: 30px; padding: 20px
-    }
-    .content.active { display: flex }
-
-    .content video, .content img {
-      max-width: 500px; width: 100%; border-radius: 12px
-    }
-    .content .text {
-      flex: 1; min-width: 280px;
-      font-size: 18px; line-height: 1.6
+    .city-list a:hover {
+      background: #e0f5e0;
+      border-color: #228B22;
+      color: #228B22;
     }
 
     footer {
-      margin-top: 40px; text-align: center;
-      font-size: 14px; color: #666; padding: 20px
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Акції</h1>
-
+    <h1>Акції по містах</h1>
     <nav class="main">
-      <a href="#" class="active">Головна</a>
-      <a href="#">Про нас</a>
-      <a href="#">Ініціативи</a>
-      <a href="#">Події</a>
-      <a href="#">Ресурси</a>
-      <a href="#">Полеглі Герої</a>
-      <a href="#" class="active">Акції</a>
-      <a href="#">Контакти</a>
-    </nav>
-
-    <nav class="subnav">
-      <a href="#" data-city="vinnytsia">Вінниця</a>
-      <a href="#" data-city="kalynivka">Калинівка</a>
-      <a href="#" data-city="tulchyn">Тульчин</a>
-      <a href="#" data-city="ladyzhyn">Ладижин</a>
-      <a href="#" data-city="haisyn">Гайсин</a>
-      <a href="#" data-city="odesa">Одеса</a>
-      <a href="#" data-city="kropyvnytskyi">Кропивницький</a>
-      <a href="#" data-city="kyiv" class="active">Київ</a>
-      <a href="#" data-city="lviv">Львів</a>
-      <a href="#" data-city="samhorodok">Самгородок</a>
-      <a href="#" data-city="ivano-frankivsk">Івано-Франківськ</a>
-      <a href="#" data-city="mohyliv-podilskyi">Могилів-Подільський</a>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="initiatives.html">Ініціативи</a>
+      <a href="events.html">Події</a>
+      <a href="resources.html">Ресурси</a>
+      <a href="heroes.html">Полеглі Герої</a>
+      <a href="actions.html" class="active">Акції</a>
+      <a href="contacts.html">Контакти</a>
     </nav>
   </header>
 
-  <!-- ===== КИЇВ ===== -->
-  <section class="content active" id="kyiv">
-    <video controls>
-      <source src="new-file/video_2025-06-04_13-42-46 (1).mp4" type="video/mp4">
-      Ваш браузер не підтримує відео.
-    </video>
-    <div class="text">
-      <p><strong>До Дня Територіальної оборони України</strong> на Майдані Незалежності відбулася зворушлива акція.</p>
-      <p>Мирна акція була організована Об'єднанням родин Захисників ТрО «Жінки ТРО» та небайдужими громадянами…</p>
-      <p><strong>Разом ми непереможні!</strong></p>
-    </div>
-  </section>
-
-  <!-- ===== ОДЕСА (оновлено!) ===== -->
-  <section class="content" id="odesa">
-    <div class="text">
-      <p><strong>В Одесі</strong> відбулася щонедільна акція-нагадування «Не мовчи! Полон вбиває!».</p>
-      <p>Її організувала ГО «Серце Одеси в полоні». Долучилися й родини 120-ї ОБр ТрО…</p>
-      <p>Учасники тримали в руках фото рідних, плакати «Поверніть з полону!», «Розшукайте зниклих!»…</p>
-    </div>
-    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_11.png" alt="Одеса фото 1">
-    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_22.png" alt="Одеса фото 2">
-    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_33.JPG" alt="Одеса фото 3">
-    <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/31_44.jpg" alt="Одеса фото 4">
-  </section>
-
-  <!-- ===== Порожні секції інших міст ===== -->
-  <section class="content" id="vinnytsia"><div class="text"><p><strong>Вінниця.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="kalynivka"><div class="text"><p><strong>Калинівка.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="tulchyn"><div class="text"><p><strong>Тульчин.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="ladyzhyn"><div class="text"><p><strong>Ладижин.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="haisyn"><div class="text"><p><strong>Гайсин.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="kropyvnytskyi"><div class="text"><p><strong>Кропивницький.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="lviv"><div class="text"><p><strong>Львів.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="samhorodok"><div class="text"><p><strong>Самгородок.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="ivano-frankivsk"><div class="text"><p><strong>Івано-Франківськ.</strong> TODO — додайте контент.</p></div></section>
-  <section class="content" id="mohyliv-podilskyi"><div class="text"><p><strong>Могилів-Подільський.</strong> TODO — додайте контент.</p></div></section>
+  <div class="city-list">
+    <a href="actions-kyiv.html">Київ</a>
+    <a href="actions-odesa.html">Одеса</a>
+    <a href="actions-vinnytsia.html">Вінниця</a>
+    <a href="actions-kalynivka.html">Калинівка</a>
+    <a href="actions-tulchyn.html">Тульчин</a>
+    <a href="actions-ladyzhyn.html">Ладижин</a>
+    <a href="actions-haisyn.html">Гайсин</a>
+    <a href="actions-kropyvnytskyi.html">Кропивницький</a>
+    <a href="actions-lviv.html">Львів</a>
+    <a href="actions-samhorodok.html">Самгородок</a>
+    <a href="actions-ivano-frankivsk.html">Івано-Франківськ</a>
+    <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
+  </div>
 
   <footer>&copy; 2025 ГО «Берегині Незламності»</footer>
 
-  <script>
-    const subnavLinks = document.querySelectorAll('.subnav a');
-    const sections     = document.querySelectorAll('.content');
-
-    subnavLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        subnavLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-
-        const id = link.dataset.city;
-        sections.forEach(sec => {
-          sec.classList.toggle('active', sec.id === id);
-        });
-      });
-    });
-  </script>
 </body>
 </html>
-
-
-
-
-
