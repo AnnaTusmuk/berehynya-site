@@ -1,47 +1,114 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Київ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Київ – Акції</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    nav, .subnav {
-      margin-bottom: 20px;
+    body {
+      margin: 0;
+      font-family: system-ui, Arial, sans-serif;
     }
-    nav a, .subnav a {
-      margin-right: 15px;
+
+    header {
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+    }
+
+    nav.main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    nav.main a {
+      color: #006400;
       text-decoration: none;
-      color: #0645AD;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background .3s;
     }
-    nav a:hover, .subnav a:hover {
-      text-decoration: underline;
+
+    nav.main a:hover,
+    nav.main a.active {
+      background: #e0f5e0;
+      color: #228B22;
+    }
+
+    nav.subnav {
+      padding: 0 20px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav.subnav a {
+      background: #f5f5f5;
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #006400;
+      font-weight: 500;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    nav.subnav a:hover,
+    nav.subnav a.active {
+      background: #e0f5e0;
+      border-color: #228B22;
+      color: #228B22;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Основна навігація -->
-  <nav>
-    <a href="index.html">Головна</a>
-    <a href="about.html">Про нас</a>
-    <a href="initiatives.html">Ініціативи</a>
-    <a href="events.html">Події</a>
-    <a href="resources.html">Ресурси</a>
-    <a href="fallen.html">Полеглі Герої</a>
-    <a href="actions.html">Акції</a>
-    <a href="contacts.html">Контакти</a>
-  </nav>
+  <header>
+    <h1>Акції в Києві</h1>
+    <nav class="main">
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="initiatives.html">Ініціативи</a>
+      <a href="events.html">Події</a>
+      <a href="resources.html">Ресурси</a>
+      <a href="heroes.html">Полеглі Герої</a>
+      <a href="actions.html" class="active">Акції</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+    <nav class="subnav">
+      <a href="actions-vinnytsia.html">Вінниця</a>
+      <a href="actions-kyiv.html" class="active">Київ</a>
+      <a href="actions-odesa.html">Одеса</a>
+      <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
+    </nav>
+  </header>
 
-  <!-- Піднавігація для вкладки "Акції" -->
-  <div class="subnav">
-    <a href="vinnytsia.html">Вінниця</a>
-    <a href="kyiv.html">Київ</a>
-    <a href="odesa.html">Одеса</a>
-    <a href="mohyliv-podilskyi.html">Могилів-Подільський</a>
-  </div>
+  <main>
+    <h2>Події та ініціативи у Києві</h2>
+    <p>Тут буде розміщено інформацію про акції, що відбуваються або відбулися у Києві: зустрічі, марші, заходи підтримки родин військовополонених тощо.</p>
+  </main>
 
-  <!-- Контент сторінки -->
-  <h1>Київ</h1>
-  <p>Тут буде інформація про акції у Києві.</p>
+  <footer>&copy; 2025 ГО «Берегині Незламності»</footer>
 
 </body>
 </html>
+
