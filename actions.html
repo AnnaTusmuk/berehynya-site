@@ -3,12 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Акції в Києві</title>
+  <title>Акції</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .city-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .city-buttons a {
+      padding: 10px 16px;
+      background-color: #4b6043;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .city-buttons a:hover {
+      background-color: #2e4d2e;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Акції в Києві</h1>
+    <h1>Акції</h1>
     <nav>
       <a href="index.html">Головна</a>
       <a href="about.html">Про нас</a>
@@ -22,9 +45,11 @@
   </header>
 
   <section>
-    <div class="subnav">
+    <p>Оберіть місто, щоб переглянути інформацію про акції:</p>
+
+    <div class="city-buttons">
       <a href="actions-vinnytsia.html">Вінниця</a>
-      <a href="actions-kyiv.html" class="active">Київ</a>
+      <a href="actions-kyiv.html">Київ</a>
       <a href="actions-odesa.html">Одеса</a>
       <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
       <a href="actions-kalynivka.html">Калинівка</a>
@@ -35,10 +60,9 @@
       <a href="actions-lviv.html">Львів</a>
       <a href="actions-ivano-frankivsk.html">Івано-Франківськ</a>
     </div>
-
-    <p>Тут буде інформація про акції, що відбувалися або плануються у Києві.</p>
   </section>
 
   <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
+
