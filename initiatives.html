@@ -166,22 +166,26 @@
   <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/88-77.jpg" alt="Фото 7" />
 </div>
 
-<!-- Додайте це в CSS -->
+<!-- CSS стилі для горизонтальної галереї -->
 <style>
   .horizontal-gallery {
     display: flex;
-    gap: 10px;
+    gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 20px;
   }
 
   .horizontal-gallery img {
-    max-width: 200px;
     height: auto;
+    width: auto;
+    max-height: 220px;
     border-radius: 8px;
+    object-fit: contain;
   }
 </style>
+
 
 
 
