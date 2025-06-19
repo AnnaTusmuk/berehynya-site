@@ -158,13 +158,31 @@
   </div>
 </section>
 
-<!-- Блок із додатковими фото внизу -->
-<div class="initiative-images">
+<!-- Горизонтальний блок фото -->
+<div class="horizontal-gallery">
   <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/88-44.jpg" alt="Фото 4" />
   <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/88-55.jpg" alt="Фото 5" />
   <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/88-66.jpg" alt="Фото 6" />
   <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/88-77.jpg" alt="Фото 7" />
 </div>
+
+<!-- Додайте це в CSS -->
+<style>
+  .horizontal-gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .horizontal-gallery img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+</style>
+
 
 
   
