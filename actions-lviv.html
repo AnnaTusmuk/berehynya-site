@@ -6,6 +6,34 @@
   <title>Акції у Львові</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #4b6043;
+      color: white;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
     .city-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -13,6 +41,7 @@
       justify-content: center;
       margin: 20px 0;
     }
+
     .city-buttons a {
       background-color: #4b6043;
       color: #fff;
@@ -22,9 +51,8 @@
       font-weight: bold;
       transition: background-color 0.3s;
     }
-    .city-buttons a:hover {
-      background-color: #2e4d2e;
-    }
+
+    .city-buttons a:hover,
     .city-buttons a.active {
       background-color: #2e4d2e;
     }
@@ -36,15 +64,18 @@
       margin: 40px 20px 20px;
       align-items: flex-start;
     }
+
     .main-image {
       flex: 1 1 400px;
       max-width: 500px;
     }
+
     .main-image img {
       width: 100%;
       border-radius: 12px;
       box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
     }
+
     .text-block {
       flex: 2 1 400px;
       font-size: 18px;
@@ -58,6 +89,7 @@
       justify-content: center;
       margin: 30px 20px;
     }
+
     .gallery img {
       width: 300px;
       border-radius: 10px;
@@ -67,6 +99,7 @@
     .video-block {
       margin: 40px 20px;
     }
+
     video {
       width: 100%;
       max-height: 450px;
@@ -75,9 +108,87 @@
       box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
     }
 
+    footer {
+      text-align: center;
+      background-color: #4b6043;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
     @media (max-width: 800px) {
       .content-flex {
         flex-direction: column;
         align-items: center;
+      }
+
+      .main-image, .text-block {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Акції у Львові</h1>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="initiatives.html">Ініціативи</a>
+      <a href="events.html">Події</a>
+      <a href="resources.html">Ресурси</a>
+      <a href="fallen.html">Полеглі Герої</a>
+      <a href="actions.html" class="active">Акції</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="city-buttons">
+      <a href="actions-vinnytsia.html">Вінниця</a>
+      <a href="actions-kyiv.html">Київ</a>
+      <a href="actions-odesa.html">Одеса</a>
+      <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
+      <a href="actions-kalynivka.html">Калинівка</a>
+      <a href="actions-tulchyn.html">Тульчин</a>
+      <a href="actions-ladyzhyn.html">Ладижин</a>
+      <a href="actions-haisyn.html">Гайсин</a>
+      <a href="actions-kropyvnytskyi.html">Кропивницький</a>
+      <a href="actions-lviv.html" class="active">Львів</a>
+      <a href="actions-ivano-frankivsk.html">Івано-Франківськ</a>
+    </div>
+
+    <div class="content-flex">
+      <div class="main-image">
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_1.jpg" alt="Головне фото події">
+      </div>
+      <div class="text-block">
+        <h2>Рідні полонених та зниклих безвісти з 120-ї бригади ТрО долучилися до акції у Львові "Мамина віра – сина броня"</h2>
+        <p>У центрі Львова, біля пам’ятника Тарасові Шевченку, відбулася мирна акція «Мамина віра – сина броня» на підтримку зниклих безвісти та полонених українських військових. Захід був приурочений до Дня Матері — дня, що символізує силу, віру та незламність родин, які чекають своїх рідних із полону.</p>
+        <p>Цього разу до акції долучилися також рідні зниклих безвісти та полонених військовослужбовців 120-ї окремої бригади територіальної оборони. Їхня присутність підкреслила, що проблема торкається не лише окремих підрозділів, а тисяч родин по всій Україні.</p>
+        <p>Серед учасників були представники родин полонених і зниклих з різних регіонів, а також представники Координаційного штабу з питань поводження з військовополоненими, Офісу Уповноваженого з прав людини у Львівській області та керівник апарату Львівської ОДА Тарас Грень.</p>
+        <p>Після виступів біля пам’ятника Шевченку учасники рушили до площі перед Оперним театром, де провели символічний перформанс, закликаючи суспільство та владу до активніших дій задля визволення полонених і встановлення долі зниклих безвісти.</p>
+        <p><em>«Ми не маємо права забути про тих, хто боронить країну, і про родини, які чекають на них щодня. Підтримка наших захисників — це спільна справа держави й народу. Ми маємо зробити все, аби кожен повернувся додому».</em></p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_5.jpg" alt="Фото 5">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_6.jpg" alt="Фото 6">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_7.jpg" alt="Фото 7">
+    </div>
+
+    <div class="video-block">
+      <video controls>
+        <source src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/video_2025-05-24_21-44-47.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео.
+      </video>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
+</body>
+</html>
+
 
 
