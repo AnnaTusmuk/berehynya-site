@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -52,6 +51,34 @@
         align-items: center;
       }
     }
+
+    /* Стилі для картинок і галереї */
+    .event-header img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    video {
+      width: 100%;
+      max-height: 450px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 6px 6px 18px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
@@ -86,14 +113,32 @@
 
     <div class="content-flex">
       <div class="video-block">
-        <!-- Вставте тут відео, наприклад iframe з YouTube -->
+        <video controls>
+          <source src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/video_2025-05-24_21-44-47.mp4" type="video/mp4">
+          Ваш браузер не підтримує відео.
+        </video>
       </div>
       <div class="text-block">
-        <!-- Вставте тут опис акції у Львові -->
+        <div class="event-header">
+          <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_1.jpg" alt="Головне фото події">
+          <h2>Рідні полонених та зниклих безвісти з 120-ї бригади ТрО долучилися до акції у Львові "Мамина віра – сина броня"</h2>
+          <p>У центрі Львова, біля пам’ятника Тарасові Шевченку, відбулася мирна акція «Мамина віра – сина броня» на підтримку зниклих безвісти та полонених українських військових. Захід був приурочений до Дня Матері — дня, що символізує силу, віру та незламність родин, які чекають своїх рідних із полону.</p>
+          <p>Цього разу до акції долучилися також рідні зниклих безвісти та полонених військовослужбовців 120-ї окремої бригади територіальної оборони. Їхня присутність підкреслила, що проблема торкається не лише окремих підрозділів, а тисяч родин по всій Україні.</p>
+          <p>Серед учасників були представники родин полонених і зниклих з різних регіонів, а також представники Координаційного штабу з питань поводження з військовополоненими, Офісу Уповноваженого з прав людини у Львівській області та керівник апарату Львівської ОДА Тарас Грень.</p>
+          <p>Після виступів біля пам’ятника Шевченку учасники рушили до площі перед Оперним театром, де провели символічний перформанс, закликаючи суспільство та владу до активніших дій задля визволення полонених і встановлення долі зниклих безвісти.</p>
+          <p>У своїй промові Тарас Грень наголосив:<br><em>«Ми не маємо права забути про тих, хто боронить країну, і про родини, які чекають на них щодня. Підтримка наших захисників — це спільна справа держави й народу. Ми маємо зробити все, аби кожен повернувся додому».</em></p>
+        </div>
       </div>
+    </div>
+
+    <div class="gallery">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_5.jpg" alt="Фото 5">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_6.jpg" alt="Фото 6">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_7.jpg" alt="Фото 7">
     </div>
   </section>
 
   <footer>&copy; 2025 ГО "Берегині Незламності"</footer>
 </body>
 </html>
+
