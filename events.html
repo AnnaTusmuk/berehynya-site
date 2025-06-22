@@ -41,43 +41,51 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
-
-    @media (max-width: 600px) {
-      .logo {
-        position: static;
-        display: block;
-        margin: 10px auto;
-        height: 40px;
-        width: auto;
-      }
-
-      nav {
-        margin-top: 10px;
-        text-align: center;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 0 8px;
-      }
-
-      header {
-        padding-bottom: 10px;
-      }
-    }
-
     .content {
       max-width: 1300px;
       padding: 40px 60px;
       margin: 0 auto;
     }
-
+    .event-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .event-photos {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+    .event-photos img {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .event-text {
+      flex: 2 1 600px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
     footer {
       background-color: #556b2f;
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .event-flex {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -94,11 +102,44 @@
       <a href="actions.html">Акції</a>
       <a href="contacts.html">Контакти</a>
     </nav>
-    
   </header>
 
   <div class="content">
-    <!-- Контент видалено -->
+    <div class="event-flex">
+      <div class="event-photos">
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-01.jpg" alt="Фото 1" />
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-02.jpg" alt="Фото 2" />
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-03.jpg" alt="Фото 3" />
+        <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-04.jpg" alt="Фото 4" />
+      </div>
+      <div class="event-text">
+        <p>У місті Могилів-Подільський відбулася важлива зустріч родин військовослужбовців 172 окремого батальйону територіальної оборони України з представниками управління 120 окремої бригади Сил територіальної оборони ЗСУ та командуванням батальйону.</p>
+        <p>Командування 172 батальйону надало вичерпну інформацію про поточний стан справ, шляхи комунікації з вищими органами влади, наявні можливості для повернення військовополонених та зниклих безвісти, а також про кроки, яких вживається підрозділ у межах своєї компетенції.</p>
+        <p>На зустріч прибули родини з різних районів, де формувався батальйон, що свідчить про актуальність та глибоку зацікавленість у темі. У процесі обговорення було поставлено чимало важливих і непростих запитань, які стосуються як загальних, так і індивідуальних ситуацій родин.</p>
+        <p>Комунікація була відкритою, динамічною та живою — представники командування відповідали на запитання максимально прямо та з повагою до кожної родини.</p>
+        <p>Серед тем, які розглядалися:</p>
+        <ul>
+          <li>Механізми отримання грошових виплат і допомог для родин полонених та зниклих безвісти.</li>
+          <li>Чіткий алгоритм проходження ДНК-експертиз, строки проведення таких процедур та порядок інформування родин про їхні результати.</li>
+          <li>Формування і подання списків на обмін через відповідні державні структури.</li>
+          <li>Як діяти родинам у разі надходження нових повідомлень, дзвінків або інших сигналів щодо зниклого військового.</li>
+          <li>Шляхи ефективної взаємодії з державними установами, що опікуються пошуком, поверненням або ідентифікацією військовослужбовців.</li>
+        </ul>
+        <p>У розмові також взяв участь заступник міського голови Могилів-Подільського Михайло Слободянюк, який висловив підтримку родинам та запевнив у готовності місцевої влади сприяти в межах своїх повноважень.</p>
+        <p>Такі зустрічі планується проводити й надалі в інших районах, де були сформовані підрозділи 120 бригади, щоб кожна родина мала можливість почути відповіді від командування та отримати підтримку.</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-05.jpg" alt="Фото 5" />
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-06.jpg" alt="Фото 6" />
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-07.jpg" alt="Фото 7" />
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-08.jpg" alt="Фото 8" />
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-09.jpg" alt="Фото 9" />
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-10.jpg" alt="Фото 10" />
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-11.jpg" alt="Фото 11" />
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/new-file/photo_39-12.jpg" alt="Фото 12" />
+    </div>
   </div>
 
   <footer>
@@ -106,6 +147,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
