@@ -196,6 +196,52 @@
   </div>
 </section>
 
+<style>
+  /* Горизонтальна галерея — стилі локально для цієї статті */
+  .initiative-gallery {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+  }
+
+  .initiative-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .initiative-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .initiative-images img:hover {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 1024px) {
+    .initiative-images {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .initiative-images {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .initiative-images {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 
   
 
