@@ -31,6 +31,30 @@
       text-decoration: underline;
     }
 
+    /* Нові стилі для навігації по містах */
+    .city-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .city-buttons a {
+      background-color: #4b6043;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .city-buttons a:hover,
+    .city-buttons a.active {
+      background-color: #2e4d2e;
+    }
+
     .content-flex {
       display: flex;
       flex-wrap: wrap;
@@ -60,11 +84,10 @@
 
     .gallery {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
       gap: 30px;
       margin: 30px 20px;
-      flex-wrap: nowrap;
     }
 
     .gallery img {
@@ -90,6 +113,15 @@
       .video-block, .text-block {
         max-width: 100%;
       }
+
+      .gallery {
+        flex-wrap: wrap;
+      }
+
+      .gallery img {
+        width: 90%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
@@ -107,6 +139,23 @@
       <a href="contacts.html">Контакти</a>
     </nav>
   </header>
+
+  <!-- Навігація по містах -->
+  <section>
+    <div class="city-buttons">
+      <a href="actions-vinnytsia.html">Вінниця</a>
+      <a href="actions-kyiv.html">Київ</a>
+      <a href="actions-odesa.html">Одеса</a>
+      <a href="actions-mohyliv-podilskyi.html">Могилів-Подільський</a>
+      <a href="actions-kalynivka.html">Калинівка</a>
+      <a href="actions-tulchyn.html">Тульчин</a>
+      <a href="actions-ladyzhyn.html" class="active">Ладижин</a>
+      <a href="actions-haisyn.html">Гайсин</a>
+      <a href="actions-kropyvnytskyi.html">Кропивницький</a>
+      <a href="actions-lviv.html">Львів</a>
+      <a href="actions-ivano-frankivsk.html">Івано-Франківськ</a>
+    </div>
+  </section>
 
   <section>
     <div class="content-flex">
