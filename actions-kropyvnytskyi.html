@@ -81,22 +81,29 @@
       line-height: 1.6;
     }
 
-   .gallery {
-  max-width: 1400px; 
-  margin: 30px auto;   
+.gallery {
   display: flex;
-  gap: 30px;
+  flex-wrap: nowrap;       /* всі фото в одному рядку */
   justify-content: center;
-  flex-wrap: nowrap;   
-  
+  gap: 30px;
+  margin: 30px 20px;
+  width: 960px;            /* ширина контейнера для трьох фото по 300px + 2*30px відступ */
+  max-width: 100%;         /* не більше ширини екрану */
 }
 
-    .gallery img {
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
-    }
+.gallery img {
+  flex: 0 0 300px;         /* фіксована ширина без стиснення */
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+}
 
+    
+
+
+
+    
     footer {
       text-align: center;
       background-color: #4b6043;
