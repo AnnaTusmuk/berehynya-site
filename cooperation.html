@@ -1,10 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Співпраця</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f6;
+      color: #2f3e2f;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4b5d3d; /* хакі-зелений */
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    section img {
+      max-width: 300px;
+      margin: 15px auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    .pdf-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #4b5d3d;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .pdf-link:hover {
+      background-color: #3a4a30;
+    }
+
+    footer {
+      background-color: #4b5d3d;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,11 +91,13 @@
 
   <section>
     <h2>Наш партнер</h2>
+    <img src="new-file/важливі.jpg" alt="ГО Важливі" />
     <p>
       Ми співпрацюємо з ГО 
-      <a href="https://important.org.ua/" target="_blank">Important</a>. 
-      Важливі - це команда психологів, які системно і кваліфіковано надають психологічну підтримку для батьків та дітей України, що постраждали від війни.
+      <a href="https://important.org.ua/" target="_blank">Important</a>. <br>
+      <strong>Важливі</strong> — це команда психологів, які системно і кваліфіковано надають психологічну підтримку для батьків та дітей України, що постраждали від війни.
     </p>
+    <a class="pdf-link" href="new-file/Меморандум про співпрацю.PDF" target="_blank">📄 Переглянути меморандум</a>
   </section>
 
   <footer>
