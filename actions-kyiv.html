@@ -80,7 +80,7 @@
      
     </div>
 
-    <style>
+<style>
   /* ===== НОВА ПУБЛІКАЦІЯ — ДЕНЬ БАХМУТУ ===== */
 
   .bakhmut-post {
@@ -174,29 +174,35 @@
   }
 
   .bakhmut-photo {
-    display: block;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-radius: 9px;
+    background: #ffffff;
     aspect-ratio: 4 / 3;
-    background: #e5e9e2;
-  }
-
-  .bakhmut-photo:first-child {
-    grid-column: span 2;
-    aspect-ratio: 8 / 5;
   }
 
   .bakhmut-photo img {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.35s ease;
   }
 
   .bakhmut-photo:hover img {
-    transform: scale(1.04);
+    transform: scale(1.02);
+  }
+
+  /* Останні два фото — по центру */
+  .bakhmut-photo:nth-last-child(2) {
+    grid-column: 1 / 2;
+    margin-left: calc(50% + 7px);
+  }
+
+  .bakhmut-photo:last-child {
+    grid-column: 2 / 3;
   }
 
   .bakhmut-ending {
@@ -205,6 +211,10 @@
     text-align: center;
     font-size: 19px;
     line-height: 1.65;
+  }
+
+  .bakhmut-ending p {
+    margin-bottom: 20px;
   }
 
   .bakhmut-final {
@@ -217,7 +227,10 @@
     color: #4b6043;
   }
 
+  /* ===== ПЛАНШЕТ ===== */
+
   @media (max-width: 800px) {
+
     .bakhmut-header h2 {
       font-size: 27px;
     }
@@ -228,8 +241,17 @@
       gap: 10px;
     }
 
-    .bakhmut-photo:first-child {
-      grid-column: span 2;
+    .bakhmut-photo:nth-last-child(2),
+    .bakhmut-photo:last-child {
+      margin-left: 0;
+    }
+
+    .bakhmut-photo:nth-last-child(2) {
+      grid-column: auto;
+    }
+
+    .bakhmut-photo:last-child {
+      grid-column: auto;
     }
 
     .bakhmut-text {
@@ -241,7 +263,10 @@
     }
   }
 
+  /* ===== ТЕЛЕФОН ===== */
+
   @media (max-width: 500px) {
+
     .bakhmut-post {
       padding: 0 12px;
     }
@@ -255,14 +280,19 @@
       padding: 8px;
     }
 
-    .bakhmut-photo:first-child {
-      grid-column: span 1;
-      aspect-ratio: 4 / 3;
+    .bakhmut-photo:nth-last-child(2),
+    .bakhmut-photo:last-child {
+      grid-column: auto;
+      margin-left: 0;
     }
 
     .bakhmut-quote {
       padding: 18px 20px;
       font-size: 18px;
+    }
+
+    .bakhmut-final {
+      font-size: 19px;
     }
   }
 </style>
@@ -270,24 +300,32 @@
 
 <section class="bakhmut-post">
 
+  <!-- ЗАГОЛОВОК -->
+
   <div class="bakhmut-header">
-    <div class="bakhmut-date">12 вересня</div>
+
+    <div class="bakhmut-date">
+      12 вересня
+    </div>
 
     <h2>
       День Бахмуту: пам'ятаємо, чекаємо, боремося
     </h2>
 
     <div class="bakhmut-line"></div>
+
   </div>
 
+
+  <!-- ОСНОВНИЙ ТЕКСТ -->
 
   <div class="bakhmut-text">
 
     <p class="bakhmut-intro">
       12 вересня, під час заходу, присвяченого Дню Бахмуту, наші серця
-      билися в один такт із болем і надією сотень родин.
-      Того дня небо плакало разом з нами, ніби сама природа відчувала,
-      що чаша болю та сліз переповнена, а роки очікування стали нестерпними.
+      билися в один такт із болем і надією сотень родин. Того дня небо
+      плакало разом з нами, ніби сама природа відчувала, що чаша болю
+      та сліз переповнена, а роки очікування стали нестерпними.
     </p>
 
     <p>
@@ -297,20 +335,22 @@
     </p>
 
     <p>
-      Навесні 2023-го, під час запеклих боїв, обірвався зв'язок із багатьма
-      нашими хлопцями. Минають роки, але біль не вщухає, а рідні досі живуть
-      у постійній невідомості.
+      Навесні 2023-го, під час запеклих боїв, обірвався зв'язок із
+      багатьма нашими хлопцями. Минають роки, але біль не вщухає,
+      а рідні досі живуть у постійній невідомості.
     </p>
+
 
     <div class="bakhmut-quote">
       Наші близькі — це не статистика, це живі долі,
       і ми не маємо права про них забути.
     </div>
 
+
     <p>
-      Ми звертаємось до структур та міжнародних організацій, які дотичні
-      до пошуку та повернення зниклих безвісти та полонених, з вимогою
-      дієвих механізмів, які змусять росію віддати наших захисників.
+      Ми звертаємось до структур та міжнародних організацій, які
+      дотичні до пошуку та повернення зниклих безвісти та полонених,
+      з вимогою дієвих механізмів, які змусять росію віддати наших захисників.
     </p>
 
     <p>
@@ -329,10 +369,14 @@
   </div>
 
 
+  <!-- ПІДЗАГОЛОВОК ПЕРЕД ФОТО -->
+
   <h3 class="bakhmut-section-title">
     Ми пам'ятаємо. Ми чекаємо. Ми разом.
   </h3>
 
+
+  <!-- ===== 23 ФОТО ===== -->
 
   <div class="bakhmut-gallery">
 
@@ -500,6 +544,8 @@
   </div>
 
 
+  <!-- ТЕКСТ ПІСЛЯ ФОТО -->
+
   <div class="bakhmut-ending">
 
     <p>
@@ -532,8 +578,10 @@
   </div>
 
 </section>
-    
 
+
+
+    
     <div class="content-flex">
       <div class="video-block">
         <video controls width="100%">
