@@ -80,161 +80,458 @@
      
     </div>
 
-    <article class="new-post">
+    <style>
+  /* ===== НОВА ПУБЛІКАЦІЯ — ДЕНЬ БАХМУТУ ===== */
 
-      <h2>День Бахмуту: пам'ятаємо, чекаємо, боремося</h2>
+  .bakhmut-post {
+    max-width: 1150px;
+    margin: 45px auto 55px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 
-      <div class="new-post-text">
+  .bakhmut-header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
 
-        <p>
-          12 вересня, під час заходу, присвяченого Дню Бахмуту, наші серця билися в один такт із болем і надією сотень родин. Того дня небо плакало разом з нами, ніби сама природа відчувала, що чаша болю та сліз переповнена, а роки очікування стали нестерпними.
-        </p>
+  .bakhmut-date {
+    display: inline-block;
+    color: #4b6043;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
 
-        <p>
-          Наші хлопці зі 120-ї окремої бригади територіальної оборони, пліч-о-пліч з іншими підрозділами, тримали оборону Бахмута та Бахмутського напрямку. Це була боротьба на межі людських можливостей.
-        </p>
+  .bakhmut-header h2 {
+    margin: 0 auto 15px;
+    color: #4b6043;
+    font-size: 32px;
+    line-height: 1.25;
+    max-width: 850px;
+  }
 
-        <p>
-          Навесні 2023-го, під час запеклих боїв, обірвався зв'язок із багатьма нашими хлопцями. Минають роки, але біль не вщухає, а рідні досі живуть у постійній невідомості.
-        </p>
+  .bakhmut-line {
+    width: 70px;
+    height: 3px;
+    background: #4b6043;
+    margin: 18px auto 0;
+    border-radius: 3px;
+  }
 
-        <div class="new-post-highlight">
-          Наші близькі — це не статистика, це живі долі, і ми не маємо права про них забути.
-        </div>
+  .bakhmut-text {
+    max-width: 950px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+  }
 
-        <p>
-          Ми звертаємось до структур та міжнародних організацій, які дотичні до пошуку та повернення зниклих безвісти та полонених, з вимогою дієвих механізмів, які змусять росію віддати наших захисників.
-        </p>
+  .bakhmut-text p {
+    margin: 0 0 20px;
+  }
 
-        <p>
-          Ми маємо повернути всіх — як живих, так і загиблих.
-        </p>
+  .bakhmut-intro {
+    font-size: 20px;
+    line-height: 1.65;
+  }
 
-        <p>
-          Низький уклін ветеранам, які пройшли через це пекло.
-        </p>
+  .bakhmut-quote {
+    margin: 32px auto;
+    padding: 24px 30px;
+    max-width: 850px;
+    background: #f1f4ef;
+    border-left: 5px solid #4b6043;
+    border-radius: 0 10px 10px 0;
+    font-size: 21px;
+    line-height: 1.55;
+    font-weight: bold;
+    color: #3e5139;
+    box-sizing: border-box;
+  }
 
-        <p>
-          Ми не зупинимось, боротьба триватиме доти, доки ми не дізнаємось правду про кожного і поки всі наші хлопці не повернуться додому.
-        </p>
+  .bakhmut-section-title {
+    text-align: center;
+    color: #4b6043;
+    font-size: 24px;
+    margin: 40px 0 20px;
+  }
 
-        <p>
-          Цей захід був організований громадською організацією «ОБОВ'ЯЗКОВО ПОВЕРНУСЬ». Ми щиро вдячні кожному, хто працював над втіленням цієї важливої ідеї. Була проведена колосальна робота.
-        </p>
+  /* ===== ФОТОГАЛЕРЕЯ ===== */
 
-        <p>
-          Попри дощ, того дня навколо відчувалося неймовірне тепло та щира підтримка.
-        </p>
+  .bakhmut-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 18px;
+    background: #f3f5f1;
+    border-radius: 14px;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    box-sizing: border-box;
+  }
 
-        <p>
-          Також щиро дякуємо Академічному зразковому оркестру Збройних Сил України, Христині Панасюк, службі ЦВС 120 ОБр ТрО за надану допомогу в організації музичного супроводу заходу та всім, хто не залишився осторонь.
-        </p>
+  .bakhmut-photo {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 9px;
+    aspect-ratio: 4 / 3;
+    background: #e5e9e2;
+  }
 
-        <div class="new-post-ending">
-          Ми, родини, тримаємось разом, підтримуючи один одного.
-        </div>
+  .bakhmut-photo:first-child {
+    grid-column: span 2;
+    aspect-ratio: 8 / 5;
+  }
 
-      </div>
+  .bakhmut-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .bakhmut-photo:hover img {
+    transform: scale(1.04);
+  }
+
+  .bakhmut-ending {
+    max-width: 900px;
+    margin: 35px auto 0;
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .bakhmut-final {
+    margin-top: 25px;
+    padding: 22px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #4b6043;
+  }
+
+  @media (max-width: 800px) {
+    .bakhmut-header h2 {
+      font-size: 27px;
+    }
+
+    .bakhmut-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 12px;
+      gap: 10px;
+    }
+
+    .bakhmut-photo:first-child {
+      grid-column: span 2;
+    }
+
+    .bakhmut-text {
+      font-size: 17px;
+    }
+
+    .bakhmut-intro {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .bakhmut-post {
+      padding: 0 12px;
+    }
+
+    .bakhmut-header h2 {
+      font-size: 24px;
+    }
+
+    .bakhmut-gallery {
+      grid-template-columns: 1fr;
+      padding: 8px;
+    }
+
+    .bakhmut-photo:first-child {
+      grid-column: span 1;
+      aspect-ratio: 4 / 3;
+    }
+
+    .bakhmut-quote {
+      padding: 18px 20px;
+      font-size: 18px;
+    }
+  }
+</style>
 
 
-      <div class="new-post-gallery">
+<section class="bakhmut-post">
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+  <div class="bakhmut-header">
+    <div class="bakhmut-date">12 вересня</div>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%281%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%281%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <h2>
+      День Бахмуту: пам'ятаємо, чекаємо, боремося
+    </h2>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%282%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%282%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <div class="bakhmut-line"></div>
+  </div>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%283%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%283%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%284%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%284%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+  <div class="bakhmut-text">
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%285%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%285%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <p class="bakhmut-intro">
+      12 вересня, під час заходу, присвяченого Дню Бахмуту, наші серця
+      билися в один такт із болем і надією сотень родин.
+      Того дня небо плакало разом з нами, ніби сама природа відчувала,
+      що чаша болю та сліз переповнена, а роки очікування стали нестерпними.
+    </p>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%286%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%286%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <p>
+      Наші хлопці зі 120-ї окремої бригади територіальної оборони,
+      пліч-о-пліч з іншими підрозділами, тримали оборону Бахмута
+      та Бахмутського напрямку. Це була боротьба на межі людських можливостей.
+    </p>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%287%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%287%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <p>
+      Навесні 2023-го, під час запеклих боїв, обірвався зв'язок із багатьма
+      нашими хлопцями. Минають роки, але біль не вщухає, а рідні досі живуть
+      у постійній невідомості.
+    </p>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%288%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20%288%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <div class="bakhmut-quote">
+      Наші близькі — це не статистика, це живі долі,
+      і ми не маємо права про них забути.
+    </div>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <p>
+      Ми звертаємось до структур та міжнародних організацій, які дотичні
+      до пошуку та повернення зниклих безвісти та полонених, з вимогою
+      дієвих механізмів, які змусять росію віддати наших захисників.
+    </p>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%281%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%281%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <p>
+      Ми маємо повернути всіх — як живих, так і загиблих.
+    </p>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%282%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%282%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <p>
+      Низький уклін ветеранам, які пройшли через це пекло.
+    </p>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%283%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%283%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <p>
+      Ми не зупинимось. Боротьба триватиме доти, доки ми не дізнаємось
+      правду про кожного і поки всі наші хлопці не повернуться додому.
+    </p>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%284%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%284%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+  </div>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%285%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%285%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%286%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20%286%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+  <h3 class="bakhmut-section-title">
+    Ми пам'ятаємо. Ми чекаємо. Ми разом.
+  </h3>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%281%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%281%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+  <div class="bakhmut-gallery">
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%282%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%282%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(1).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(1).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%283%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%283%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(2).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(2).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%284%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%284%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(3).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(3).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%285%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%285%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(4).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(4).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
 
-        <a href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%286%29.jpeg" target="_blank">
-          <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20%286%29.jpeg" alt="Захід до Дня Бахмуту">
-        </a>
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(5).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(5).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
 
-      </div>
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(6).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(6).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
 
-    </article>
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(7).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(7).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
 
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(8).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46%20(8).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46.jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.46.jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(1).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(1).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(2).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(2).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(3).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(3).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(4).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(4).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(5).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(5).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(6).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47%20(6).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47.jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.47.jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(1).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(1).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(2).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(2).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(3).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(3).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(4).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(4).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(5).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(5).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(6).jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48%20(6).jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+    <a class="bakhmut-photo"
+       href="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48.jpeg"
+       target="_blank">
+      <img src="kyiv/WhatsApp%20Image%202026-09-14%20at%2016.56.48.jpeg"
+           alt="Захід до Дня Бахмуту" loading="lazy">
+    </a>
+
+  </div>
+
+
+  <div class="bakhmut-ending">
+
+    <p>
+      Цей захід був організований громадською організацією
+      «ОБОВ'ЯЗКОВО ПОВЕРНУСЬ». Ми щиро вдячні кожному, хто працював
+      над втіленням цієї важливої ідеї. Була проведена колосальна робота.
+    </p>
+
+    <p>
+      Попри дощ, того дня навколо відчувалося неймовірне тепло
+      та щира підтримка.
+    </p>
+
+    <p>
+      Також щиро дякуємо Академічному зразковому оркестру Збройних Сил України,
+      Христині Панасюк, службі ЦВС 120 ОБр ТрО за надану допомогу
+      в організації музичного супроводу заходу та всім, хто не залишився осторонь.
+    </p>
+
+    <p>
+      Ми, родини, тримаємось разом, підтримуючи один одного.
+    </p>
+
+  </div>
+
+
+  <div class="bakhmut-final">
+    Ми не зупинимось.<br>
+    Ми пам'ятаємо. Ми чекаємо. Ми боремося разом.
+  </div>
+
+</section>
     
 
     <div class="content-flex">
