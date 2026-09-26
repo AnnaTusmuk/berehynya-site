@@ -93,15 +93,141 @@
 
 
 
-<section class="bakhmut-post">
 
-  <div class="bakhmut-date">30 серпня 2026</div>
 
-  <h2 class="bakhmut-title">
+    <style>
+  .vinnytsia-post {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #333;
+    font-family: inherit;
+  }
+
+  .vinnytsia-date {
+    text-align: center;
+    color: #6f8b68;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .vinnytsia-title {
+    text-align: center;
+    color: #55704f;
+    font-size: 32px;
+    line-height: 1.25;
+    margin: 0 auto 28px;
+    font-weight: 700;
+  }
+
+  .vinnytsia-text {
+    max-width: 950px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .vinnytsia-text p {
+    margin: 0 0 18px;
+  }
+
+  /* Галерея — 3 фото в ряд */
+  .vinnytsia-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 18px;
+    background: #f3f5f1;
+    border-radius: 14px;
+    max-width: 1100px;
+    margin: 30px auto 0;
+    box-sizing: border-box;
+  }
+
+  .vinnytsia-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 9px;
+    background: #fff;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    box-sizing: border-box;
+  }
+
+  .vinnytsia-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .vinnytsia-photo:hover img {
+    transform: scale(1.02);
+  }
+
+  /* Планшет */
+  @media (max-width: 800px) {
+    .vinnytsia-post {
+      padding: 0 14px;
+    }
+
+    .vinnytsia-title {
+      font-size: 27px;
+    }
+
+    .vinnytsia-text {
+      font-size: 17px;
+    }
+
+    .vinnytsia-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 12px;
+      gap: 10px;
+    }
+  }
+
+  /* Телефон */
+  @media (max-width: 500px) {
+    .vinnytsia-post {
+      padding: 0 10px;
+      margin-top: 25px;
+    }
+
+    .vinnytsia-date {
+      font-size: 16px;
+    }
+
+    .vinnytsia-title {
+      font-size: 24px;
+    }
+
+    .vinnytsia-text {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .vinnytsia-gallery {
+      grid-template-columns: 1fr;
+      padding: 8px;
+    }
+  }
+</style>
+
+
+<section class="vinnytsia-post">
+
+  <div class="vinnytsia-date">30 серпня 2026</div>
+
+  <h2 class="vinnytsia-title">
     «ОБ'ЄДНАНІ ВІЙНОЮ»
   </h2>
 
-  <div class="bakhmut-text">
+  <div class="vinnytsia-text">
 
     <p>
       Запрошуємо вас відвідати виставку «ОБ'ЄДНАНІ ВІЙНОЮ», яка все ще триває у Відокремленому підрозділі Вінницького обласного краєзнавчого музею, «Музеї Мужніх».
@@ -129,65 +255,66 @@
 
   </div>
 
-  <div class="bakhmut-gallery">
 
-    <a class="bakhmut-photo" href="vinnytsia/1991.jpeg" target="_blank">
+  <div class="vinnytsia-gallery">
+
+    <a class="vinnytsia-photo" href="vinnytsia/1991.jpeg" target="_blank">
       <img src="vinnytsia/1991.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1992.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1992.jpeg" target="_blank">
       <img src="vinnytsia/1992.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1993.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1993.jpeg" target="_blank">
       <img src="vinnytsia/1993.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1994.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1994.jpeg" target="_blank">
       <img src="vinnytsia/1994.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1995.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1995.jpeg" target="_blank">
       <img src="vinnytsia/1995.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1996.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1996.jpeg" target="_blank">
       <img src="vinnytsia/1996.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1997.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1997.jpeg" target="_blank">
       <img src="vinnytsia/1997.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1998.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1998.jpeg" target="_blank">
       <img src="vinnytsia/1998.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/1999.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/1999.jpeg" target="_blank">
       <img src="vinnytsia/1999.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/2000.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/2000.jpeg" target="_blank">
       <img src="vinnytsia/2000.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/2001.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/2001.jpeg" target="_blank">
       <img src="vinnytsia/2001.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/2002.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/2002.jpeg" target="_blank">
       <img src="vinnytsia/2002.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/2003.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/2003.jpeg" target="_blank">
       <img src="vinnytsia/2003.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/2004.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/2004.jpeg" target="_blank">
       <img src="vinnytsia/2004.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
-    <a class="bakhmut-photo" href="vinnytsia/2005.jpeg" target="_blank">
+    <a class="vinnytsia-photo" href="vinnytsia/2005.jpeg" target="_blank">
       <img src="vinnytsia/2005.jpeg" alt="Виставка «ОБ'ЄДНАНІ ВІЙНОЮ»">
     </a>
 
