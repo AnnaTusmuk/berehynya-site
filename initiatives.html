@@ -146,22 +146,22 @@
 
 
 
-
-```html
 <!-- 011 стаття -->
-<section class="initiative-content initiative-media-post">
+<section class="vatican-post">
 
-  <div class="initiative-top">
+  <div class="vatican-top">
+
     
-    <div class="initiative-images">
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222223.jpg" alt="Зустріч у Ватикані — фото 1" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222224.jpg" alt="Зустріч у Ватикані — фото 2" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222225.jpg" alt="Зустріч у Ватикані — фото 3" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222226.jpg" alt="Зустріч у Ватикані — фото 4" />
-      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222227.jpg" alt="Зустріч у Ватикані — фото 5" />
+    <div class="vatican-photos">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222223.jpg" alt="Зустріч у Ватикані — фото 1">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222224.jpg" alt="Зустріч у Ватикані — фото 2">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222225.jpg" alt="Зустріч у Ватикані — фото 3">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222226.jpg" alt="Зустріч у Ватикані — фото 4">
+      <img src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222227.jpg" alt="Зустріч у Ватикані — фото 5">
     </div>
 
-    <div class="initiative-text">
+    
+    <div class="vatican-text">
       <strong>18.02.2026</strong><br />
       На площі Св.Петра у Ватикані під час Загальної аудієнції Папа Лев ХІV зустрівся з делегацією з України. До складу якої, увійшла також представниця нашої ГО "БЕРЕГИНІ НЕЗЛАМНОСТІ" та Об'єднання родин зниклих безвісти, полонених, звільнених з полону та загиблих 120 ОБр ТрО - Майструк Наталія.<br />
       Делегацію супроводжував Надзвичайний і Повноважний посол України при Святому Престолі та Суверенному Мальтійському Ордені Андрій Юраш.<br />
@@ -170,7 +170,8 @@
 
   </div>
 
-  <div class="initiative-video">
+  <!-- ВІДЕО ВНИЗУ -->
+  <div class="vatican-video">
     <video controls playsinline>
       <source src="https://raw.githubusercontent.com/AnnaTusmuk/berehynya-site/main/222228.mp4" type="video/mp4">
       Ваш браузер не підтримує відтворення відео.
@@ -178,7 +179,79 @@
   </div>
 
 </section>
-```
+
+<style>
+.vatican-post {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vatican-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 30px;
+  width: 100%;
+  align-items: start;
+}
+
+.vatican-photos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.vatican-photos img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+.vatican-text {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.vatican-video {
+  width: 100%;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+
+.vatican-video video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .vatican-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vatican-video {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vatican-photos {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+
+
 
 
 
